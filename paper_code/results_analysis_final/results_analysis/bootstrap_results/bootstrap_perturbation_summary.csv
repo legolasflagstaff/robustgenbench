@@ -1,0 +1,2 @@
+resampling_dimension,n_configurations,n_datasets,n_metrics,metrics,n_bootstrap_iterations,top_k,top_k_fraction,kendall_tau_mean,kendall_tau_std,kendall_tau_median,kendall_tau_ci_lower,kendall_tau_ci_upper,mean_ci_width,median_ci_width
+perturbation_types,78,6,5,"['clean_acc', 'Linf_acc', 'L2_acc', 'L1_acc', 'common_acc']",10000,26,0.33,0.8995730894853914,0.05173367637987088,0.9042145719329598,0.7809428727379727,1.0,13.628846153846144,11.0

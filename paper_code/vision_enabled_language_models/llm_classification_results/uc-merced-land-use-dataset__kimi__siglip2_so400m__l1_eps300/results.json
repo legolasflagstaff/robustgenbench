@@ -1,0 +1,4215 @@
+{
+  "provider": "bedrock",
+  "model": "moonshotai.kimi-k2.5",
+  "dataset": "uc-merced-land-use-dataset__zeroshot_siglip2_so400m_patch14_384__l1_eps300_autoattack_standard",
+  "split": "test",
+  "run_name": "uc-merced-land-use-dataset__kimi__siglip2_so400m__l1_eps300",
+  "timestamp": "2026-07-25T03:06:44.963604",
+  "total_samples": 420,
+  "correct": 288,
+  "errors": 0,
+  "accuracy": 0.6857142857142857,
+  "elapsed_seconds": 86.03,
+  "per_sample": [
+    {
+      "index": 72,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 73,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 71,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 75,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 76,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "chaparral",
+      "parsed_prediction": "chaparral",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 78,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 74,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nThe image shows boats docked in slips at a marina, which is characteristic of a harbor. The water and the organized arrangement of boats in docking spaces are typical features of a harbor environment.",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 79,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 81,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 77,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be ocean waves with white foamy water meeting a shoreline. The texture shows the characteristic pattern of waves breaking on a beach - the white frothy appearance of surf and the transition to what looks like sand or shore. This is clearly a beach scene.\n\nbeach",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 82,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 83,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 84,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 80,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see dense green vegetation with a textured pattern characteristic of tree canopy. The image shows what appears to be an aerial or satellite view of dense tree cover with varying shades of green, which is typical of forested areas. There are no visible structures, roads, or other human-made features that would suggest other classes like residential, agricultural, or recreational areas. The dense, continuous green coverage with the",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 87,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 88,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 86,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nThe image shows an aerial view of numerous boats docked in parallel rows in a marina/harbor setting. The boats are arranged in organized slips with water channels between them, which is characteristic of a harbor environment. The dark green/blue water and the systematic arrangement of vessels clearly indicate this is a harbor rather than any other category.",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 89,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 85,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a highway/road passing over another road or railway, with the characteristic structure of an overpass - the elevated roadway crossing above another transportation route. The image shows the aerial view of this infrastructure with supporting embankments and the crossing pattern typical of an overpass. This matches the \"overpass\" class.",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 91,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 92,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 93,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 94,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 96,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 97,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 90,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbeach\n\nbe",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 101,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 95,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to classify this aerial/satellite image. Looking at the image, I can see large rectangular structures with flat roofs, arranged in an organized pattern with what appears to be a central courtyard or green space. The structures have a uniform, industrial or commercial appearance with large roof areas. This is clearly an urban scene with constructed buildings rather than any natural landscape or other specific category like parking lots, residential areas, etc. The large scale and organized layout of multiple substantial structures best fits the",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 99,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "intersection\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be a road marking or pavement marking with directional arrows and lane markings. This is characteristic of a road intersection with painted traffic markings including turn arrows and lane dividers. The pattern shows typical intersection markings used to guide traffic flow. Based on the visual elements of road markings, arrows, and lane indicators, this is best classified as an \"intersection\".intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 319,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 98,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- Multiple lanes of traffic with vehicles\n- A divided highway with a median\n- Road infrastructure with clear lane markings\n- Some buildings/residential area at the bottom\n- Desert/arid landscape surrounding the road\n\nThis is clearly a **freeway** - a multi-lane, high-speed road with limited access, featuring multiple lanes in each direction separated by a median.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 100,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a winding waterway with vegetation on both sides. The dark, meandering path through green areas is characteristic of a river. The image shows water with tree/vegetation cover along its banks, which matches the typical appearance of a river in aerial or satellite imagery. This is not a harbor (which would have more structured docking areas), not a beach (no sand visible), and not",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 320,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 102,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach\n\nThe image shows ocean waves with white foam/seafoam, which is characteristic of a beach environment. The diagonal pattern of the wave breaking and the greenish-blue water with white frothy edges are typical visual features of a beach scene viewed from above (likely aerial or satellite imagery). This matches the \"beach\" class in the given list.",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 321,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 104,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 103,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "intersection\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a road with lane markings and what appears to be a crosswalk or intersection markings. The yellow dotted line and white lines suggest this is a road intersection area. Among the given options, \"intersection\" is the most appropriate classification for this image showing road markings at an intersection point.",
+      "parsed_prediction": "intersection",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 106,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 107,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 105,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to reconsider. Looking at this image more carefully, I can see a highway/road with what appears to be a bridge structure casting a shadow. The dark area appears to be water or shadow beneath a bridge. This shows a road passing over something, which is characteristic of an overpass.\n\noverpass",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 322,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 323,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 108,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 325,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 324,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 326,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 327,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 111,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 110,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 328,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 112,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 113,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 330,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 114,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 329,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 109,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach\n\nThe image shows ocean waves with white foam/seafoam, which is characteristic of a beach environment. The diagonal patterns of the waves and the greenish-gray water with white frothy areas are typical of coastal/beach scenes. This matches the \"beach\" class from the given options.",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 115,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 331,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 332,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 116,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 117,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 335,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 118,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 119,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "chaparral",
+      "parsed_prediction": "chaparral",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 120,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 336,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 333,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nI need to classify this image into exactly one of the given classes. Looking at the image, I can see boats docked at piers in a marina/harbor setting. The image shows multiple boats arranged along wooden docks in the water. This clearly matches the \"harbor\" class. harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 334,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "overpass\n\nI need to reconsider. Looking at this image more carefully, this shows a road with what appears to be a bridge or overpass structure. The concrete surface with lane markings and the structure visible suggests this is an **overpass**. However, looking again at the pattern - this shows a highway/road from above with what looks like an overpass structure or ramp.\n\nActually, re-examining: this appears to be an aerial view of a highway interchange with an overpass structure.",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 337,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 338,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 123,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 340,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "runway\n\nThe image shows parallel lines characteristic of airport runways or taxiways, with the distinctive linear patterns and surface texture typical of paved airstrips. The intersecting and parallel markings are consistent with runway infrastructure.",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 339,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "forest\n\nThe image shows a green, textured pattern with diagonal striations that resembles tree canopy or forest vegetation when viewed from above, typical of aerial or satellite imagery of forested areas. The uniform green coloration and texture pattern is consistent with forest land cover classification.",
+      "parsed_prediction": "forest",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 121,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks\n\nI need to classify this image into one of the given classes. Looking at the image, I can see large circular structures that appear to be storage tanks, likely for water or other liquids. These are characteristic of water treatment facilities or industrial storage sites. The large circular concrete structures with domed or flat tops are clearly storage tanks. There are also some buildings and roads visible, but the dominant and most distinctive feature is the large circular storage tanks.\n\nstoragetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 341,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 124,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 122,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- A body of water running through the scene\n- What appears to be a boat or barge on the water\n- Vegetation/trees along the banks\n- The waterway appears to be a canal or river\n\nBased on these visual characteristics, the most appropriate classification is **river**. The image shows a waterway with boats, which is characteristic of a river environment.",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 125,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 342,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 343,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 127,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 344,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 345,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 126,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this image into exactly one of the given classes. Looking at the image, I can see an aerial view of a road crossing over another road, with a vehicle visible on the upper roadway. This structure where one road passes over another is an overpass. The image clearly shows the characteristic elevated roadway with supporting structure that defines an overpass.",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 129,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 346,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 128,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane\n\nI need to classify this image into one of the given classes. Looking at the image, I can see two airplanes parked at what appears to be an airport gate or terminal area. There are jet bridges connected to the aircraft, ground service vehicles, and airport infrastructure visible. This clearly matches the \"airplane\" class.",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 130,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 132,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 348,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach\n\nThe image shows a sandy shoreline meeting water, which is characteristic of a beach environment. The light-colored area appears to be sand and the darker blue-green area is water, with the curved boundary between them forming the coastline. The speckled appearance is consistent with aerial or satellite imagery of a beach.",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 347,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be an aerial view of large structures with multiple rectangular sections, arranged in a grid-like pattern. These appear to be large building complexes, possibly industrial or commercial buildings with flat roofs. The structures have a uniform, organized appearance typical of built-up areas with significant construction.\n\nBased on the visual characteristics - the large rectangular structures, flat roofs, organized layout, and the scale",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 350,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 131,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, it appears to show dense vegetation with a textured green and dark pattern that is characteristic of forest canopy when viewed from above (such as from satellite or aerial imagery). The dense, irregular texture with varying shades of green and dark areas is typical of forested areas. There are no clear signs of human development like buildings, roads, or cleared areas that would suggest other classes like residential, agricultural, or recreational",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 349,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this image showing roads crossing at different levels with vehicles visible on both levels. This is clearly an overpass structure where one road passes over another. The image shows the characteristic aerial view of elevated highway infrastructure crossing over another roadway, with vehicles on both the upper and lower levels. This matches the \"overpass\" class perfectly.",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 135,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 351,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 352,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 133,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "freeway\n\nI need to reconsider. Looking at this image more carefully, this appears to be an aerial view of a road with lane markings. The image shows what looks like a road surface with white painted lines. Given the aerial/satellite view perspective and the road markings, this is most likely a **freeway** or possibly an **intersection**. \n\nLooking more carefully at the pattern - this appears to be a road with lane markings seen from above. The class that best fits is:\n\nfre",
+      "parsed_prediction": "intersection",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 134,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "forest\n\nThis image shows tree rings, which is characteristic of forest/wooded areas. The concentric ring pattern is typical of cross-sections of tree trunks, indicating this is from a forest environment.",
+      "parsed_prediction": "forest",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 136,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 353,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 137,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 354,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 138,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 139,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 355,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 356,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 140,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 141,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 358,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 357,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 142,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 359,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 143,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 360,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 145,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 144,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nLooking at this image, I can see what appears to be a body of water with vegetation along its banks. The dark curved band in the middle appears to be water, with lighter colored land above and below showing what looks like trees or vegetation along the shoreline. This matches the characteristics of a river scene.",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 146,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 362,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "runway\n\nThe image shows a textured surface with parallel linear patterns that are characteristic of an airport runway, with visible markings and the typical grooved concrete or asphalt surface used for aircraft traction. The diagonal striations and overall gray appearance match the visual characteristics of runway surfaces.",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 361,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to classify this image into one of the given classes. Looking at the image, I can see multiple structures with flat roofs, which appear to be industrial or commercial buildings. The image shows an aerial view of several rectangular structures with what look like HVAC units or equipment on the rooftops. This is clearly an urban/industrial area with multiple buildings.\n\nThe class that best matches this image is \"buildings\" - this category encompasses industrial, commercial, and other constructed structures, which",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 363,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 147,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 364,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 148,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 365,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 150,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 367,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 366,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 151,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 149,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nThe image shows an aerial view of a marina with numerous boats docked in slips, which is characteristic of a harbor. The organized arrangement of boats in water with docks/piers clearly identifies this as a harbor scene.",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 368,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 152,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 369,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 153,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 154,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 155,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 372,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 156,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 371,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nThe image shows numerous boats docked in slips at a marina, which is characteristic of a harbor. The water is visible with boats arranged in organized rows along piers/docks.",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 373,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 157,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 374,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 158,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 375,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 370,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see green vegetation with trees and grassy areas. The image shows natural vegetation with trees of varying sizes and densities spread across a green landscape. This appears to be a forested or wooded area with open grassy spaces between tree clusters. Among the available options, \"forest\" best describes this scene as it depicts natural tree coverage rather than residential, agricultural, or other developed land uses. The image does",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 160,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 378,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 376,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a winding waterway with greenish-brown water, surrounded by vegetation and what appears to be rocky or sandy banks. The water body has a natural, meandering shape typical of a river, with trees and greenery on both sides. This matches the \"river\" class. The image does not show characteristics of the other classes like agricultural fields, buildings, roads, or sports facilities. The",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 159,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway\n\nI need to classify this image into exactly one of the provided classes.\n\nLooking at the image, I can see:\n- Multiple lanes of traffic with vehicles\n- A divided highway with cars traveling in both directions\n- Road markings and lane dividers\n- Surrounding vegetation and some buildings\n\nThis is clearly a **freeway** - a multi-lane, high-speed highway with controlled access, featuring multiple vehicles traveling in organized lanes.\n\nfreeway",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 377,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "overpass\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be an aerial or satellite view showing a dark elongated structure crossing over a lighter surface with road markings. The dark strip appears to be a bridge or overpass structure crossing over a roadway below. The green circular area in the corner suggests some kind of landscaping or painted area. The key features - the elevated dark structure spanning across what appears to be a road with lane markings",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 161,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a winding waterway with vegetation along its banks, and what appears to be a residential area with buildings in the upper left corner. The dominant feature is the waterway/river running through the landscape with trees and greenery along its edges. This matches the \"river\" class most accurately.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 379,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway\n\nThe image shows an aerial view of an airport runway with its characteristic long, dark paved surface, white centerline markings, and the curved taxiway markings connecting to it. The surrounding grassy areas and the geometric pattern of the pavement markings are typical of airport runway infrastructure.",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 164,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 380,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 162,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be an aerial view of a runway with characteristic markings. The image shows:\n\n- A long, straight paved surface (gray/brown)\n- White painted markings that look like runway threshold markings or runway designation markings\n- Green areas on either side that appear to be grass/turf areas adjacent to the runway\n- The distinctive pattern of parallel white lines that are typical of",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 165,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 381,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 163,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings\n\nI need to classify this image into one of the given classes. Looking at the image, I can see an aerial view of a large residential or institutional building complex with multiple structures, red/brown rooftops, chimneys, and surrounding grounds with what appears to be a tennis court. This is clearly a built structure, making \"buildings\" the most appropriate classification. While there is a tennis court visible, the dominant feature is the building complex itself. The other classes like \"ten",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 166,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 383,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 384,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 382,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a dark linear water body running through the scene with vegetation along its banks and what appears to be a road or path running parallel to it. The dark color and shape are characteristic of a river as seen from aerial/satellite imagery. The surrounding terrain shows natural vegetation and some developed areas along the bank. This matches the \"river\" class.",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 169,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 167,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see dense vegetation with trees and greenery. The dark area in the center appears to be a cluster of trees, and there's surrounding green vegetation. This matches the characteristics of a forest - an area with dense tree coverage and natural vegetation. The image doesn't show clear signs of being agricultural (cultivated fields), residential areas, infrastructure like roads or buildings, or other specific land uses. The natural",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 170,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 386,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings\n\nI need to classify this satellite/aerial image. Looking at the image, I can see a structure with a brown roof surrounded by agricultural fields (the striped green patterns). There's a road or highway visible on the right side. The central feature is clearly a building or small cluster of buildings with some vehicles or equipment around it, situated in a rural/agricultural setting.\n\nWhile there are agricultural fields surrounding it, the main subject of the image is the building structure itself. The class \"",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 387,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 171,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 168,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 172,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 388,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 389,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 385,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane\n\nrunway\n\nI need to classify this image into exactly one class. Looking at the image, I can see an airplane on what appears to be a runway or taxiway at an airport. The image shows an aerial view of a commercial jet aircraft (blue and white with red tail) on a paved surface with airport markings including \"IL 119\" signage.\n\nWhile \"runway\" is also present in the scene, the most prominent and distinctive subject is the **airplane** itself",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 173,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 390,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 174,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 391,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 392,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 393,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 176,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 175,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway\n\nI need to classify this image into exactly one of the provided classes.\n\nLooking at the image, I can see:\n- Multiple lanes of paved road with vehicles traveling on them\n- A large truck and several cars\n- Highway infrastructure with medians/dividers\n- This is clearly a major multi-lane highway\n\nThis matches the \"freeway\" class perfectly - it's a high-speed, multi-lane highway with vehicles.\n\nfreeway",
+      "parsed_prediction": "freeway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 394,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 395,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, it appears to be a dark, dense area with vegetation. The texture and appearance suggest dense tree cover with varying shades of dark green and black, which is characteristic of a forested area. The image shows what looks like canopy cover typical of forest land, without clear signs of buildings, roads, or other developed features that would indicate residential, commercial, or other land use types. The darkness and texture",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 179,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 177,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane\n\nrunway\n\nI need to classify this image into exactly one class. Looking at the image, I can see an airplane on what appears to be an airport tarmac/runway area. The image shows an aerial view of a commercial airplane.\n\nWhile \"runway\" could describe the location, the most prominent and specific subject in the image is the **airplane** itself, which is one of the available classes.\n\nairplane\n\nrunway\n\nLet me reconsider - the image shows an",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 396,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 178,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrunway\n\nairplane\n\nrun",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 181,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 397,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 398,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 180,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 182,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 399,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 183,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 184,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 400,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "chaparral",
+      "parsed_prediction": "chaparral",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 401,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 402,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 185,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 186,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 403,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 187,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 404,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 405,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 189,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 406,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 190,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 407,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 408,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 191,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 188,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 409,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 192,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 410,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 195,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 412,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 193,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nWait, let me reconsider. Looking at this image more carefully - it appears to show a road or path with vegetation on the sides. The texture suggests this might actually be a **freeway** or road. However, the image quality is quite grainy.\n\nActually, re-examining: this looks like an aerial view of a **river** with surrounding dry vegetation/banks. The linear feature with the textured surface and natural boundaries on both sides suggests a waterway.\n\nriver\n\nLet",
+      "parsed_prediction": "freeway",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 194,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a winding waterway with vegetation along its banks. The dark areas represent water, and there are trees and greenery surrounding it. This matches the characteristics of a river - a natural flowing watercourse. The image shows the typical appearance of a river from an aerial/satellite view with its meandering path through a vegetated landscape.",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 413,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 196,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- A road crossing over multiple lanes of highway/freeway below\n- The structure shows a bridge/overpass with vehicles on it\n- There are multiple lanes of traffic running perpendicular underneath\n- The aerial view clearly shows the elevated roadway crossing over another roadway\n\nThis is clearly an **overpass** - a structure that carries one road over another. The image shows the classic characteristics",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 197,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 415,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 198,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 411,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, it shows dense green vegetation with a textured, canopy-like appearance typical of tree cover. The uniform green coloration and dense texture pattern is characteristic of forested areas when viewed from above (such as from satellite or aerial imagery). This matches the \"forest\" class among the options provided. The image does not show the structured patterns of residential areas, the geometric shapes of agricultural fields, or the distinctive features",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 414,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 199,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 201,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 417,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 416,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nThe image shows boats docked in slips at a marina, which is characteristic of a harbor. The waterway between rows of docked boats is clearly visible, with vessels arranged in an organized pattern typical of boat storage facilities in harbors.",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 418,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 202,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 204,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 203,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 419,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 200,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor\n\nThe image shows boats docked in slips at a marina, which is a harbor facility for boats and yachts. The distinctive arrangement of boats in parallel rows with docks/piers between them is characteristic of a harbor.",
+      "parsed_prediction": "harbor",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 207,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 206,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 208,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 209,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 205,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 212,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 211,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 210,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 213,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 217,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 218,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 216,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 220,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 219,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 214,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see dense vegetation with a dark green, textured appearance that resembles tree canopy viewed from above. The pattern shows continuous coverage of what appears to be treetops, which is characteristic of a forested area when viewed from an aerial or satellite perspective. This matches the \"forest\" class among the options provided. The dense, uniform green texture without visible roads, buildings, or clearings distinguishes it",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 215,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see multiple lanes of traffic with vehicles on a divided highway. This is characteristic of a freeway - a multi-lane high-speed road with vehicles traveling in both directions, separated by a median. The aerial view shows the typical layout of a freeway with multiple lanes and cars. This matches the \"freeway\" class perfectly. The answer is freeway.",
+      "parsed_prediction": "freeway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 221,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to classify this image into one of the given classes. Looking at the image, I can see a dark linear feature running through the center with vegetation on both sides, and what appears to be roads or paths parallel to it. The dark feature with surrounding greenery and the linear nature of it strongly suggests this is a **river**. The dark color indicates water, and the vegetation patterns along the banks are typical of riparian zones. The parallel lighter-colored strips on either side appear to",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 223,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 222,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 225,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 228,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "chaparral",
+      "parsed_prediction": "chaparral",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 227,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 226,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 224,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, it appears to be an aerial or satellite view showing dense green vegetation with a textured, canopy-like appearance. The dark green coloration and dense, irregular pattern is characteristic of forest cover when viewed from above. The image shows continuous tree coverage without visible roads, buildings, or clearings that would indicate other land uses. This matches the \"forest\" class.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 229,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "airplane\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be an aerial view of an airplane on the ground. The shape shows the distinctive form of an aircraft with wings and a fuselage, viewed from above. This matches the \"airplane\" class. \n\nairplane",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 231,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 230,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 232,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 237,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 233,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to classify this aerial/satellite image. Looking at the image, I can see rooftops of structures, what appears to be industrial or commercial buildings with flat roofs, HVAC equipment, and paved areas. This clearly shows man-made structures rather than natural landscapes or specific facilities like airports, sports fields, or residential neighborhoods. The \"buildings\" class best describes this image showing urban/industrial building rooftops from an aerial perspective.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 235,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see dense green vegetation with a textured pattern that appears to be tree canopy viewed from above. The dark and light green mottled texture is characteristic of dense tree cover. This matches the \"forest\" class, which represents areas with dense tree vegetation. The image does not show any of the other features like buildings, roads, water bodies, or other man-made structures that would indicate other classes",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 239,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 238,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 234,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 240,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "chaparral",
+      "parsed_prediction": "chaparral",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 241,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 236,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 244,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nWait, let me reconsider. Looking at this image more carefully - this shows a road crossing over another road with a gap/shadow between them. This is actually an **overpass** where one roadway passes over another.\n\noverpass",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 246,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 247,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 243,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nWait, let me reconsider. Looking at this image more carefully, this appears to be a rooftop view with multiple HVAC units and mechanical equipment. This is characteristic of a **parkinglot** - actually no, looking again, this is clearly building rooftops with mechanical equipment.\n\nbuildings\n\nActually, re-examining: this shows flat rooftops with multiple white rectangular structures (likely HVAC units). This is most consistent with **buildings**.\n\nbuildings\n\nFinal answer: buildings",
+      "parsed_prediction": "parkinglot",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 242,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to reconsider. Looking at this image more carefully, this appears to be an aerial view of vegetation with a dark linear feature running through it. The dark area could be water, but the overall scene with dense green vegetation on both sides suggests this is actually a **river** running through forested or vegetated land.\n\nriver\n\nActually, let me look once more. The image shows dense green vegetation with a dark winding channel through the middle. This is characteristic of a river viewed from",
+      "parsed_prediction": "forest",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 245,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks\n\nI need to reconsider. Looking at the image more carefully, I can see what appears to be a pool and some structures. Let me analyze again.\n\nThe image shows: a dark paved area with rectangular shapes (possibly vehicles or containers), a swimming pool with a circular structure nearby, and some vegetation. This appears to be a residential area with a pool.\n\nLooking at the classes again: mediumresidential or sparseresidential seem most appropriate. Given the presence of a pool and",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 248,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 249,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 250,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 251,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 252,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 253,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 254,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 255,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 257,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 17,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 256,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 9,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 11,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 259,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 258,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see multiple lanes of a highway with vehicles on it, concrete barriers, and what appears to be light poles. This is clearly a freeway - a multi-lane high-speed road with vehicles traveling on it. The concrete dividers, multiple lanes in each direction, and the overall structure are characteristic of a freeway.",
+      "parsed_prediction": "freeway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 260,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 10,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nWait, let me reconsider. Looking at the image more carefully, this shows a highway with multiple lanes and vehicles, with a road crossing over it. This is specifically an **overpass** - where one road crosses over another.\n\noverpass\n\nActually, let me look again. The image shows a highway/freeway with an overpass structure. The main feature is the elevated road crossing over the highway. \n\noverpass\n\nHmm, but \"freeway\" is also an option.",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 261,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 12,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 13,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 14,
+      "int_label": 10,
+      "ground_truth": "harbor",
+      "raw_prediction": "harbor",
+      "parsed_prediction": "harbor",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 264,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 15,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 263,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 16,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 265,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 18,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 262,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this image into exactly one of the given classes. Looking at the image, I can see two highways/roads crossing each other with one passing over the other, forming an overpass structure. There are vehicles visible on the roads. This is clearly an overpass - where one road crosses over another road. The \"intersection\" class would typically refer to at-grade intersections where roads meet at the same level, but here one road clearly passes over another, making \"",
+      "parsed_prediction": "intersection",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 266,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 19,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 20,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 268,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 267,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 21,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 269,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 270,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 271,
+      "int_label": 11,
+      "ground_truth": "intersection",
+      "raw_prediction": "intersection",
+      "parsed_prediction": "intersection",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 22,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nThe image shows dense green vegetation with a textured pattern characteristic of forest canopy when viewed from above, such as in satellite or aerial imagery. The uniform green coverage with varying shades indicates tree cover without visible roads, buildings, or other distinguishing features of the other classes.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 24,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 272,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 25,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 273,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 23,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this image into exactly one of the given classes.\n\nLooking at the image, I can see:\n- A highway/road running horizontally across the image\n- Another road or railway running vertically underneath\n- A bridge structure carrying the horizontal road over the vertical road\n- Vehicles on the horizontal roadway\n- The characteristic structure of one transportation route passing over another\n\nThis is clearly an **overpass** - a structure that allows one road to pass over another. The image",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 26,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 274,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 275,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 28,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 276,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 277,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 30,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 27,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "beach\n\nThe image shows a white sandy area adjacent to green vegetation and water, which is characteristic of a beach environment. The light-colored shoreline area contrasting with the darker green forest/vegetation above and the water body is typical of beach satellite imagery.",
+      "parsed_prediction": "forest",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 29,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "golfcourse",
+      "parsed_prediction": "golfcourse",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 279,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 31,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 32,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass",
+      "parsed_prediction": "overpass",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 280,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 33,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 281,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 282,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 35,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 278,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 283,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 34,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "mobilehomepark\n\nI need to reconsider. Looking at this image, it appears to show a pattern of closely spaced parallel lines, which is characteristic of **mobilehomepark** when viewed from aerial/satellite imagery - the regular spacing typically represents rows of mobile homes. However, this could also potentially be other classes.\n\nLooking more carefully at the texture - the uniform, dense parallel striping pattern is most consistent with **mobilehomepark** aerial view patterns.\n\nmobilehomepark\n\nActually, let me reconsider",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 37,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 38,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 286,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 39,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 36,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- Multiple structures with different colored roofs (dark gray and reddish-brown)\n- What appears to be a large commercial or institutional building complex\n- Parking areas visible\n- The layout suggests a school, office complex, or similar facility\n\nThis is clearly **buildings** - showing an aerial view of constructed structures with rooftops, which matches the \"buildings\" class. It's",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 284,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nI need to reconsider. Looking at this image more carefully - this appears to be a road or highway with vegetation on the side. The linear feature with parallel lines suggests a **freeway** or road rather than a river. The brown strip could be a median or the road itself, with lighter colored lanes.\n\nfreeway\n\nActually, looking more carefully at the image - the dark linear feature with green vegetation alongside it and the parallel lighter strips - this looks most like a **river** with",
+      "parsed_prediction": "freeway",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 287,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 40,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 288,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 285,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "beach\n\nThis image shows a pattern of small dark spots on a lighter background with linear features, which is characteristic of a beach environment with vegetation patterns, tidal channels, or wet/dry sand patterns visible from aerial/satellite imagery. The texture and pattern match typical beach classifications in remote sensing datasets.",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 41,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 289,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 43,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "baseballdiamond",
+      "parsed_prediction": "baseballdiamond",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 42,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "runway\n\nThe image shows a long, straight, paved surface with parallel lines and markings typical of an airport runway. The uniform gray surface with vertical striping patterns is characteristic of runway pavement.",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 44,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 45,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 292,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 290,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- A paved surface with white markings\n- The letters \"R\" and \"W\" visible (likely part of runway numbering)\n- White rectangular markings typical of runway threshold markings\n- Yellow markings along the edges\n- The characteristic appearance of an airport runway with its concrete/asphalt surface and standardized aviation markings\n\nThis is clearly a **runway** - the specialized strip of",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 294,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 291,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "buildings\n\nI need to reconsider. Looking at this image more carefully, this appears to be an aerial or satellite view of industrial or commercial structures. The white rectangular areas with what look like loading docks or doors, and the dark roofs suggest this is likely **storagetanks** or industrial buildings. However, based on the pattern of rectangular structures with uniform openings and the industrial appearance, this is most consistent with **storagetanks**.\n\nstoragetanks\n\nActually, re-examining: this looks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 47,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 295,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 46,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "freeway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- Multiple lanes of paved road\n- Lane markings (white and yellow lines)\n- This appears to be an aerial/satellite view of a highway/freeway\n\nThe image shows a multi-lane highway with clear lane markings, which matches the \"freeway\" class. The other classes like intersection, overpass, or parkinglot don't fit as well - this is clearly a",
+      "parsed_prediction": "intersection",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 49,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 296,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 293,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to analyze this image carefully. Looking at the satellite/aerial imagery, I can see large structures with distinct architectural features including what appears to be a circular structure and rectangular buildings. This appears to be an urban area with significant constructed infrastructure. The large building complex with the distinctive circular element and organized layout indicates this is best classified as \"buildings\" - representing commercial, institutional, or large-scale architectural structures rather than residential areas or other land use types. The density and scale of",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 50,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 51,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway",
+      "parsed_prediction": "runway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 48,
+      "int_label": 9,
+      "ground_truth": "golfcourse",
+      "raw_prediction": "beach\n\nI need to reconsider. Looking at this image more carefully, I can see green vegetation/trees and what appears to be a sandy or light-colored shoreline area. The white/light area in the bottom right looks like sand along a water body. This appears to be a **beach** scene with vegetation and shoreline.\n\nbeach",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 297,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane\n\nI need to classify this image into one of the given classes. Looking at the image, I can see an aerial view of an airplane on the ground, likely at an airport or airfield. The image shows the distinctive shape of an aircraft with wings, fuselage, and tail visible from above. There are also some ground vehicles and infrastructure nearby. This clearly matches the \"airplane\" class.",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 52,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach",
+      "parsed_prediction": "beach",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 298,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings\n\nI need to classify this image into one of the given classes. Looking at the image, I can see aerial views of large flat-roofed structures with rectangular shapes, which are characteristic of industrial or commercial buildings. The white/light colored roofs, the geometric patterns, and the overall layout are typical of building rooftops seen from above. This clearly matches the \"buildings\" class.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 299,
+      "int_label": 17,
+      "ground_truth": "runway",
+      "raw_prediction": "runway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see what appears to be a dark elongated strip with white markings alongside it, and there are circular/curved patterns that look like runway markings or taxiway lines. The white rectangular markings are characteristic of runway threshold markings or runway edge markings. The overall appearance with the dark paved surface and distinctive white markings is consistent with an airport runway. The green area in the corner could be grass surrounding",
+      "parsed_prediction": "runway",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 53,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 54,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 302,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 55,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 301,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river\n\nLooking at this image, I can see what appears to be a waterway with vegetation along its banks. The darker strip running horizontally appears to be water, with textured land above and vegetation below, which is characteristic of a river scene. The grainy, somewhat muted tones and the natural boundary between water and land with riparian vegetation strongly suggest this is a river.",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 300,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see dense green vegetation with various shades of green, which appears to be tree canopy cover. This is characteristic of a forested area. The texture shows the typical mottled pattern of tree tops and dense vegetation without clearings, roads, or human-made structures that would indicate other classes like residential areas, agricultural land, or recreational facilities. The image shows natural dense vegetation consistent with a forest",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 303,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 304,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "freeway",
+      "parsed_prediction": "freeway",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 57,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 56,
+      "int_label": 8,
+      "ground_truth": "freeway",
+      "raw_prediction": "freeway\n\nI need to classify this image into one of the given classes. Looking at the image, I can see:\n\n- Multiple lanes of paved road with lane markings\n- Vehicles on the road\n- This is clearly a highway/freeway with multiple lanes in each direction\n- There's an overpass or bridge structure visible\n- The aerial view shows the characteristic parallel lanes of a major highway\n\nAmong the options provided, \"freeway\" is the most accurate classification for this image. While there",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 305,
+      "int_label": 5,
+      "ground_truth": "chaparral",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 306,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "denseresidential",
+      "parsed_prediction": "denseresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 58,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 0,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 307,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 308,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks",
+      "parsed_prediction": "storagetanks",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 60,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest",
+      "parsed_prediction": "forest",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 59,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane\n\nI need to classify this image into one of the given classes. Looking at the image, I can clearly see an airplane on what appears to be an airport tarmac or runway area. The image shows a large commercial jet aircraft from an aerial/satellite view, with its distinctive fuselage, wings, and tail visible. There are also ground service vehicles and equipment around it, which is typical of an airport environment.\n\nThe class that matches this image is \"airplane\".",
+      "parsed_prediction": "airplane",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 61,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "sparseresidential",
+      "parsed_prediction": "sparseresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 62,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 63,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 311,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 309,
+      "int_label": 14,
+      "ground_truth": "overpass",
+      "raw_prediction": "overpass\n\nI need to classify this aerial image. Looking at the image, I can see a road crossing over another road (a highway/freeway). This is an overpass structure - where one roadway passes over another. The image clearly shows the elevated roadway crossing above the lower highway, with support structures visible. This matches the \"overpass\" class.",
+      "parsed_prediction": "overpass",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 1,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks\n\nI need to classify this image into one of the given classes.\n\nLooking at the image, I can see a large cylindrical structure with a white top and dark side, which appears to be a water storage tank or similar industrial storage tank. There's also a parking lot visible to the left with several cars.\n\nThe most appropriate classification from the given options is **storagetanks**.",
+      "parsed_prediction": "storagetanks",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 64,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 2,
+      "int_label": 18,
+      "ground_truth": "sparseresidential",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 310,
+      "int_label": 16,
+      "ground_truth": "river",
+      "raw_prediction": "river",
+      "parsed_prediction": "river",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 65,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 313,
+      "int_label": 15,
+      "ground_truth": "parkinglot",
+      "raw_prediction": "parkinglot",
+      "parsed_prediction": "parkinglot",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 3,
+      "int_label": 20,
+      "ground_truth": "tenniscourt",
+      "raw_prediction": "tenniscourt",
+      "parsed_prediction": "tenniscourt",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 312,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "river\n\nThe image shows a body of water with visible texture and patterns typical of a river surface, with what appear to be small boats or watercraft visible on it. The overall appearance is consistent with an aerial view of a river.",
+      "parsed_prediction": "river",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 4,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 66,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 315,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mobilehomepark",
+      "parsed_prediction": "mobilehomepark",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 67,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 6,
+      "int_label": 12,
+      "ground_truth": "mediumresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 314,
+      "int_label": 0,
+      "ground_truth": "agricultural",
+      "raw_prediction": "runway\n\nThe image shows a long, linear paved surface with parallel markings, which is characteristic of an airport runway. The diagonal striations and overall gray appearance are typical of runway pavement textures. The small green markers visible are consistent with runway edge lighting or marking systems. The extensive, flat, engineered surface without buildings or vegetation patterns matches the runway class.",
+      "parsed_prediction": "buildings",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 5,
+      "int_label": 3,
+      "ground_truth": "beach",
+      "raw_prediction": "beach\n\nThe image shows an aerial view of ocean water with waves breaking along a shoreline, which is characteristic of a beach environment. The greenish water and white foam from the waves are typical coastal features. The dark linear feature in the water appears to be a pier or jetty structure commonly found at beaches.",
+      "parsed_prediction": "beach",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 316,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 7,
+      "int_label": 4,
+      "ground_truth": "buildings",
+      "raw_prediction": "buildings",
+      "parsed_prediction": "buildings",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 69,
+      "int_label": 1,
+      "ground_truth": "airplane",
+      "raw_prediction": "airplane",
+      "parsed_prediction": "airplane",
+      "confidence": 1.0,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 68,
+      "int_label": 7,
+      "ground_truth": "forest",
+      "raw_prediction": "forest\n\nI need to classify this image into one of the given classes. Looking at the image, I can see dense green vegetation with a textured pattern that appears to be tree canopy cover. The dark and light green mottled texture is characteristic of aerial or satellite imagery of forested areas. There are no visible buildings, roads, or other man-made structures that would suggest residential, agricultural, or other developed land uses. The dense, continuous green coverage with varying shades indicating tree tops and shadows is",
+      "parsed_prediction": "agricultural",
+      "confidence": 0.95,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 70,
+      "int_label": 2,
+      "ground_truth": "baseballdiamond",
+      "raw_prediction": "agricultural",
+      "parsed_prediction": "agricultural",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 8,
+      "int_label": 13,
+      "ground_truth": "mobilehomepark",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    },
+    {
+      "index": 318,
+      "int_label": 19,
+      "ground_truth": "storagetanks",
+      "raw_prediction": "storagetanks\n\nI can see what appears to be large cylindrical storage tanks in an industrial area, with one prominent circular tank visible in a containment area. The surrounding infrastructure and layout are consistent with a storage tank facility.",
+      "parsed_prediction": "storagetanks",
+      "confidence": 0.95,
+      "correct": true,
+      "error": false
+    },
+    {
+      "index": 317,
+      "int_label": 6,
+      "ground_truth": "denseresidential",
+      "raw_prediction": "mediumresidential",
+      "parsed_prediction": "mediumresidential",
+      "confidence": 1.0,
+      "correct": false,
+      "error": false
+    }
+  ]
+}

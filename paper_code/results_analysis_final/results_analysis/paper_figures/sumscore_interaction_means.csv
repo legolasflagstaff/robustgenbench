@@ -1,0 +1,58 @@
+level1,level2,score_sum,interaction,letter,var1,var2,p_value
+Base,fully attention,11.314793650793652,Base | fully attention,a,model_size,model_type,6.54357976416348e-08
+Base,fully convolutional,15.79193537414966,Base | fully convolutional,b,model_size,model_type,6.54357976416348e-08
+Base,hybrid,16.419785714285712,Base | hybrid,a,model_size,model_type,6.54357976416348e-08
+Small,fully attention,7.94950496031746,Small | fully attention,c,model_size,model_type,6.54357976416348e-08
+Small,fully convolutional,12.263724867724868,Small | fully convolutional,a,model_size,model_type,6.54357976416348e-08
+Small,hybrid,10.276404761904763,Small | hybrid,a,model_size,model_type,6.54357976416348e-08
+Tiny,fully attention,9.438880952380954,Tiny | fully attention,a,model_size,model_type,6.54357976416348e-08
+Tiny,fully convolutional,7.479132275132275,Tiny | fully convolutional,c,model_size,model_type,6.54357976416348e-08
+Tiny,hybrid,9.99360582010582,Tiny | hybrid,c,model_size,model_type,6.54357976416348e-08
+Classic AT,fully attention,8.623245149911817,Classic AT | fully attention,a,loss_function,model_type,0.0013075356687005683
+Classic AT,fully convolutional,11.818771825396826,Classic AT | fully convolutional,a,loss_function,model_type,0.0013075356687005683
+Classic AT,hybrid,9.8755,Classic AT | hybrid,a,loss_function,model_type,0.0013075356687005683
+TRADES,fully attention,10.806539682539682,TRADES | fully attention,a,loss_function,model_type,0.0013075356687005683
+TRADES,fully convolutional,14.00163988095238,TRADES | fully convolutional,b,loss_function,model_type,0.0013075356687005683
+TRADES,hybrid,14.490097883597883,TRADES | hybrid,b,loss_function,model_type,0.0013075356687005683
+Classic AT,Base,12.072041446208113,Classic AT | Base,a,loss_function,model_size,8.478017846384683e-06
+Classic AT,Small,8.752377777777777,Classic AT | Small,b,loss_function,model_size,8.478017846384683e-06
+Classic AT,Tiny,7.855621315192744,Classic AT | Tiny,b,loss_function,model_size,8.478017846384683e-06
+TRADES,Base,15.174209876543209,TRADES | Base,a,loss_function,model_size,8.478017846384683e-06
+TRADES,Small,10.908261375661375,TRADES | Small,b,loss_function,model_size,8.478017846384683e-06
+TRADES,Tiny,9.817834467120182,TRADES | Tiny,b,loss_function,model_size,8.478017846384683e-06
+Classic AT,fusion,7.789039682539683,Classic AT | fusion,a,loss_function,pre_training_strategy,0.08023906969855225
+Classic AT,self-supervised,8.988396825396824,Classic AT | self-supervised,a,loss_function,pre_training_strategy,0.08023906969855225
+Classic AT,self-supervised (multimodal),12.827957671957671,Classic AT | self-supervised (multimodal),a,loss_function,pre_training_strategy,0.08023906969855225
+Classic AT,supervised,9.478426984126985,Classic AT | supervised,a,loss_function,pre_training_strategy,0.08023906969855225
+Classic AT,supervised (multistep),11.481915343915345,Classic AT | supervised (multistep),a,loss_function,pre_training_strategy,0.08023906969855225
+Classic AT,supervised (robust),11.019238095238094,Classic AT | supervised (robust),a,loss_function,pre_training_strategy,0.08023906969855225
+TRADES,fusion,14.933301587301589,TRADES | fusion,a,loss_function,pre_training_strategy,0.08023906969855225
+TRADES,self-supervised,10.555813492063493,TRADES | self-supervised,a,loss_function,pre_training_strategy,0.08023906969855225
+TRADES,self-supervised (multimodal),16.821417989417988,TRADES | self-supervised (multimodal),a,loss_function,pre_training_strategy,0.08023906969855225
+TRADES,supervised,11.625412698412699,TRADES | supervised,a,loss_function,pre_training_strategy,0.08023906969855225
+TRADES,supervised (multistep),14.459320105820106,TRADES | supervised (multistep),a,loss_function,pre_training_strategy,0.08023906969855225
+TRADES,supervised (robust),12.733250793650793,TRADES | supervised (robust),a,loss_function,pre_training_strategy,0.08023906969855225
+fusion,fully attention,10.530428571428573,fusion | fully attention,a,pre_training_strategy,model_type,0.056316673451202344
+fusion,fully convolutional,12.191912698412699,fusion | fully convolutional,a,pre_training_strategy,model_type,0.056316673451202344
+self-supervised,fully attention,9.772105158730158,self-supervised | fully attention,a,pre_training_strategy,model_type,0.056316673451202344
+self-supervised (multimodal),fully attention,10.692706349206349,self-supervised (multimodal) | fully attention,a,pre_training_strategy,model_type,0.056316673451202344
+self-supervised (multimodal),fully convolutional,16.890678571428573,self-supervised (multimodal) | fully convolutional,a,pre_training_strategy,model_type,0.056316673451202344
+supervised,fully attention,8.772434240362811,supervised | fully attention,b,pre_training_strategy,model_type,0.056316673451202344
+supervised,fully convolutional,11.638585317460318,supervised | fully convolutional,a,pre_training_strategy,model_type,0.056316673451202344
+supervised,hybrid,11.30453492063492,supervised | hybrid,a,pre_training_strategy,model_type,0.056316673451202344
+supervised (multistep),fully attention,10.815994708994708,supervised (multistep) | fully attention,a,pre_training_strategy,model_type,0.056316673451202344
+supervised (multistep),fully convolutional,14.400801587301588,supervised (multistep) | fully convolutional,a,pre_training_strategy,model_type,0.056316673451202344
+supervised (multistep),hybrid,16.574119047619046,supervised (multistep) | hybrid,a,pre_training_strategy,model_type,0.056316673451202344
+supervised (robust),fully attention,10.350742063492063,supervised (robust) | fully attention,a,pre_training_strategy,model_type,0.056316673451202344
+supervised (robust),fully convolutional,12.893246031746031,supervised (robust) | fully convolutional,a,pre_training_strategy,model_type,0.056316673451202344
+fusion,Base,11.361170634920637,fusion | Base,a,pre_training_strategy,model_size,0.0012151284865039487
+self-supervised,Base,13.084630952380952,self-supervised | Base,a,pre_training_strategy,model_size,0.0012151284865039487
+self-supervised,Small,6.459579365079366,self-supervised | Small,b,pre_training_strategy,model_size,0.0012151284865039487
+self-supervised (multimodal),Base,14.82468783068783,self-supervised (multimodal) | Base,a,pre_training_strategy,model_size,0.0012151284865039487
+supervised,Base,14.087761904761905,supervised | Base,a,pre_training_strategy,model_size,0.0012151284865039487
+supervised,Small,9.842811507936508,supervised | Small,a,pre_training_strategy,model_size,0.0012151284865039487
+supervised,Tiny,8.836727891156462,supervised | Tiny,b,pre_training_strategy,model_size,0.0012151284865039487
+supervised (multistep),Base,14.42471626984127,supervised (multistep) | Base,a,pre_training_strategy,model_size,0.0012151284865039487
+supervised (multistep),Small,10.062420634920635,supervised (multistep) | Small,a,pre_training_strategy,model_size,0.0012151284865039487
+supervised (robust),Base,11.856460317460318,supervised (robust) | Base,a,pre_training_strategy,model_size,0.0012151284865039487
+supervised (robust),Small,11.889433862433862,supervised (robust) | Small,a,pre_training_strategy,model_size,0.0012151284865039487

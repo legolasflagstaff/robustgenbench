@@ -1,0 +1,76 @@
+% Requires: booktabs, multirow, array
+\begin{table*}[t]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.08}
+\small
+\caption{%
+  Adversarial transfer accuracy (\%) under each surrogate and threat model,
+  evaluated on two open-weight Ve-LLMs (Kimi K2.5, Qwen3 VL 235B) accessed via API
+  with the same prompt as the closed-source targets (Table~\ref{tab:transfer_full}).
+  \emph{Clean}: no attack.
+  Bold values = column/block averages.
+  {\textemdash}: not evaluated.
+  See Table~\ref{tab:common} for common corruption results.
+}
+\label{tab:transfer_open}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l || r | rrrrrrr | r || r | rrrrrrr | r}
+\toprule
+\multirow{3}{*}{\textbf{Dataset}}
+  & \multicolumn{9}{c||}{\textbf{Kimi K2.5}}
+  & \multicolumn{9}{c}{\textbf{Qwen3 VL 235B}} \\
+  & \multirow{2}{*}{Clean} & \multicolumn{7}{c|}{Adversarial} & \multirow{2}{*}{\textbf{Avg.}}
+  & \multirow{2}{*}{Clean} & \multicolumn{7}{c|}{Adversarial} & \multirow{2}{*}{\textbf{Avg.}} \\
+  & & $\ell_1^{75}$ & $\ell_1^{300}$ & $\ell_2^{2}$ & $\ell_2^{8}$ & $\ell_\infty^{4}$ & $\ell_\infty^{8}$ & $\ell_\infty^{30}$ &
+  & & $\ell_1^{75}$ & $\ell_1^{300}$ & $\ell_2^{2}$ & $\ell_2^{8}$ & $\ell_\infty^{4}$ & $\ell_\infty^{8}$ & $\ell_\infty^{30}$ & \\
+\midrule
+\multicolumn{19}{l}{\textit{Surrogate: \textbf{CLIP ViT-B/16}}}  \\
+\addlinespace[1pt]
+\hspace{4pt}Caltech-101 & 90.4 & 90.2 & 90.7 & 90.0 & 87.8 & 89.7 & 90.4 & 79.8 & 88.4 & 92.6 & 92.3 & 92.9 & 92.8 & 90.1 & 92.7 & 92.5 & 85.4 & 91.2 \\
+\hspace{4pt}FGVC Aircraft & 82.0 & 80.5 & 79.9 & 81.2 & 77.6 & 81.4 & 80.2 & 75.2 & 79.4 & 35.5 & 35.6 & 33.5 & 35.0 & 31.3 & 34.2 & 32.8 & 30.3 & 33.2 \\
+\hspace{4pt}Flowers-102 & 88.7 & 88.1 & 88.2 & 88.2 & 85.1 & 88.7 & 87.9 & 71.2 & 85.3 & 87.8 & 87.2 & 86.3 & 87.0 & 83.8 & 86.8 & 86.0 & 71.6 & 84.1 \\
+\hspace{4pt}Oxford Pet & 93.2 & 92.0 & 90.0 & 91.3 & 81.4 & 92.3 & 89.5 & 67.5 & 86.3 & 88.1 & 86.6 & 84.1 & 86.8 & 72.6 & 86.8 & 84.2 & 64.1 & 80.7 \\
+\hspace{4pt}Stanford Cars & 89.2 & 86.6 & 83.6 & 87.7 & 72.1 & 87.5 & 84.4 & 59.4 & 80.2 & 74.3 & 69.4 & 64.0 & 67.8 & 50.3 & 68.5 & 63.7 & 42.3 & 60.9 \\
+\hspace{4pt}UC Merced & 77.4 & 72.9 & 72.4 & 71.9 & 64.3 & 74.5 & 72.1 & 48.1 & 68.0 & 80.2 & 79.5 & 77.4 & 78.8 & 65.0 & 76.7 & 74.5 & 50.7 & 71.8 \\
+\addlinespace[1pt]
+\hspace{4pt}\textit{Avg.} & \textbf{86.8} & \textbf{85.0} & \textbf{84.1} & \textbf{85.1} & \textbf{78.0} & \textbf{85.7} & \textbf{84.1} & \textbf{66.9} & \textbf{81.3} & \textbf{76.4} & \textbf{75.1} & \textbf{73.0} & \textbf{74.7} & \textbf{65.5} & \textbf{74.3} & \textbf{72.3} & \textbf{57.4} & \textbf{70.3} \\
+\midrule
+\multicolumn{19}{l}{\textit{Surrogate: \textbf{CLIP ViT-H/14}}}  \\
+\addlinespace[1pt]
+\hspace{4pt}Caltech-101 & 90.4 & 90.1 & 89.8 & 90.4 & 82.5 & 90.4 & 87.9 & 53.8 & 83.6 & 92.6 & 92.7 & 91.9 & 91.7 & 83.5 & 92.3 & 89.3 & 61.3 & 86.1 \\
+\hspace{4pt}FGVC Aircraft & 82.0 & 81.0 & 77.8 & 80.1 & 70.9 & 78.8 & 75.8 & 54.7 & 74.2 & 35.5 & 35.6 & 32.2 & 34.2 & 25.9 & 33.1 & 31.6 & 21.7 & 30.6 \\
+\hspace{4pt}Flowers-102 & 88.7 & 88.1 & 86.6 & 87.8 & 74.6 & 87.3 & 84.2 & 32.3 & 77.3 & 87.8 & 86.5 & 85.6 & 86.2 & 70.6 & 86.6 & 80.7 & 38.2 & 76.3 \\
+\hspace{4pt}Oxford Pet & 93.2 & 90.0 & 83.3 & 88.3 & 59.6 & 88.4 & 78.5 & 17.8 & 72.3 & 88.1 & 85.2 & 79.5 & 84.4 & 49.4 & 83.2 & 73.2 & 23.8 & 68.4 \\
+\hspace{4pt}Stanford Cars & 89.2 & 86.3 & 80.3 & 84.5 & 61.7 & 84.5 & 77.8 & 26.7 & 71.7 & 74.3 & 70.5 & 61.2 & 66.3 & 39.4 & 65.6 & 53.7 & 19.6 & 53.8 \\
+\hspace{4pt}UC Merced & 77.4 & 73.3 & 70.2 & 73.6 & 51.4 & 71.9 & 66.0 & 24.5 & 61.6 & 80.2 & 78.3 & 74.8 & 75.5 & 51.4 & 74.5 & 66.9 & 34.8 & 65.2 \\
+\addlinespace[1pt]
+\hspace{4pt}\textit{Avg.} & \textbf{86.8} & \textbf{84.8} & \textbf{81.3} & \textbf{84.1} & \textbf{66.8} & \textbf{83.6} & \textbf{78.4} & \textbf{35.0} & \textbf{73.4} & \textbf{76.4} & \textbf{74.8} & \textbf{70.9} & \textbf{73.0} & \textbf{53.4} & \textbf{72.6} & \textbf{65.9} & \textbf{33.2} & \textbf{63.4} \\
+\midrule
+\multicolumn{19}{l}{\textit{Surrogate: \textbf{MetaCLIP ViT-H/14}}}  \\
+\addlinespace[1pt]
+\hspace{4pt}Caltech-101 & 90.4 & 90.2 & 90.0 & 90.1 & 86.7 & 90.3 & 88.7 & 65.2 & 85.9 & 92.6 & 92.4 & 92.5 & 92.4 & 87.8 & 92.1 & 90.7 & 71.8 & 88.5 \\
+\hspace{4pt}FGVC Aircraft & 82.0 & 81.1 & 78.5 & 79.8 & 74.2 & 78.9 & 73.9 & 49.1 & 73.6 & 35.5 & 34.5 & 32.0 & 32.6 & 28.3 & 33.2 & 30.0 & 20.3 & 30.1 \\
+\hspace{4pt}Flowers-102 & 88.7 & 87.6 & 87.6 & 86.5 & 79.4 & 86.6 & 84.5 & 42.7 & 79.3 & 87.8 & 87.0 & 84.3 & 86.0 & 75.8 & 85.7 & 79.9 & 44.9 & 77.7 \\
+\hspace{4pt}Oxford Pet & 93.2 & 90.4 & 85.4 & 88.7 & 71.3 & 88.5 & 79.1 & 25.1 & 75.5 & 88.1 & 85.5 & 82.0 & 84.5 & 62.9 & 83.3 & 72.9 & 31.0 & 71.7 \\
+\hspace{4pt}Stanford Cars & 89.2 & 87.4 & 84.2 & 85.3 & 72.8 & 85.3 & 79.3 & 37.0 & 75.9 & 74.3 & 70.7 & 65.3 & 67.1 & 47.8 & 64.5 & 57.4 & 26.7 & 57.1 \\
+\hspace{4pt}UC Merced & 77.4 & 73.6 & 69.3 & 73.8 & 50.5 & 74.5 & 63.8 & 23.6 & 61.3 & 80.2 & 77.1 & 75.0 & 75.5 & 49.0 & 74.8 & 62.6 & 31.2 & 63.6 \\
+\addlinespace[1pt]
+\hspace{4pt}\textit{Avg.} & \textbf{86.8} & \textbf{85.0} & \textbf{82.5} & \textbf{84.0} & \textbf{72.5} & \textbf{84.0} & \textbf{78.2} & \textbf{40.4} & \textbf{75.2} & \textbf{76.4} & \textbf{74.5} & \textbf{71.9} & \textbf{73.0} & \textbf{58.6} & \textbf{72.3} & \textbf{65.6} & \textbf{37.6} & \textbf{64.8} \\
+\midrule
+\multicolumn{19}{l}{\textit{Surrogate: \textbf{SigLIP2 SO400M}}}  \\
+\addlinespace[1pt]
+\hspace{4pt}Caltech-101 & 90.4 & 90.2 & 90.7 & 90.4 & 88.7 & 90.4 & 90.2 & 77.0 & 88.2 & 92.6 & 92.5 & 91.8 & 92.6 & 90.5 & 92.7 & 92.5 & 80.4 & 90.4 \\
+\hspace{4pt}FGVC Aircraft & 82.0 & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & 35.5 & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} \\
+\hspace{4pt}Flowers-102 & 88.7 & 88.1 & 88.4 & 87.4 & 84.1 & 88.0 & 87.4 & 63.0 & 83.8 & 87.8 & 87.1 & 86.8 & 86.2 & 81.5 & 86.5 & 84.9 & 58.3 & 81.6 \\
+\hspace{4pt}Oxford Pet & 93.2 & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & 88.1 & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} \\
+\hspace{4pt}Stanford Cars & 89.2 & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & 74.3 & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} & {\textemdash} \\
+\hspace{4pt}UC Merced & 77.4 & 74.0 & 68.6 & 73.8 & 61.7 & 74.0 & 68.8 & 38.1 & 65.6 & 80.2 & 77.6 & 74.0 & 76.4 & 56.2 & 76.4 & 69.0 & 40.0 & 67.1 \\
+\addlinespace[1pt]
+\hspace{4pt}\textit{Avg.} & \textbf{85.5} & \textbf{84.1} & \textbf{82.6} & \textbf{83.9} & \textbf{78.2} & \textbf{84.1} & \textbf{82.1} & \textbf{59.4} & \textbf{79.2} & \textbf{86.9} & \textbf{85.7} & \textbf{84.2} & \textbf{85.1} & \textbf{76.1} & \textbf{85.2} & \textbf{82.1} & \textbf{59.6} & \textbf{79.7} \\
+\midrule
+\textbf{Global avg.} & \textbf{86.8} & \textbf{84.8} & \textbf{82.6} & \textbf{84.3} & \textbf{73.3} & \textbf{84.4} & \textbf{80.5} & \textbf{49.1} & \textbf{77.0} & \textbf{76.4} & \textbf{76.4} & \textbf{73.7} & \textbf{75.2} & \textbf{61.6} & \textbf{74.8} & \textbf{70.0} & \textbf{45.2} & \textbf{68.1} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

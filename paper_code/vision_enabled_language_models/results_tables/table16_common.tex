@@ -1,0 +1,27 @@
+% Requires: booktabs, multirow
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+\small
+\caption{%
+  Robustness to common corruptions (severity 3).
+  \emph{Clean} accuracy reported for reference.
+}
+\label{tab:common_bedrock}
+\begin{tabular}{l || r r || r r}
+\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multicolumn{2}{c||}{\textbf{Kimi K2.5}} & \multicolumn{2}{c}{\textbf{Qwen3 VL 235B}} \\
+ & Clean & Sev.$^3$ & Clean & Sev.$^3$ \\
+\midrule
+Caltech-101 & 90.4 & 83.2 & 92.6 & 87.2 \\
+FGVC Aircraft & 82.0 & 45.3 & 35.5 & 19.9 \\
+Flowers-102 & 88.7 & 75.4 & 87.8 & 73.6 \\
+Oxford Pet & 93.2 & 78.0 & 88.1 & 76.7 \\
+Stanford Cars & 89.2 & 63.4 & 74.3 & 47.1 \\
+UC Merced & 77.4 & 52.9 & 80.2 & 56.0 \\
+\midrule
+\textbf{Average} & \textbf{86.8} & \textbf{66.4} & \textbf{76.4} & \textbf{60.1} \\
+\bottomrule
+\end{tabular}
+\end{table}
