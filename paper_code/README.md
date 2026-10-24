@@ -1,3 +1,9 @@
+# Paper code
+
+This folder contains the code, configurations, raw results, and analyses used to produce the RobustGenBench paper. To evaluate new models, use the `robustgenbench` package at the root of the repository instead.
+
+**Data version.** These scripts read the original `.tar.zst` archives (dataset v1.0). The dataset's `main` branch now uses Parquet files, so every download here is pinned to the Hub tag `v1.0-archives` (`revision="v1.0-archives"`). Run the commands below from this folder.
+
 ## 📚 Using the RobustGenBench Benchmark
 
 ### Create the Python environment
@@ -27,6 +33,7 @@ from huggingface_hub import snapshot_download
 
 snapshot_download(
     repo_id="legolasflagstaff/RobustGenBench",
+    revision="v1.0-archives",
     repo_type="dataset",
     local_dir="~/data/",
     ignore_patterns="adversarial/*",

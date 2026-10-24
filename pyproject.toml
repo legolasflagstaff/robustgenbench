@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robustgenbench"
+version = "2.0.0"
+description = "Benchmark for robust generalization of image classifiers and vision-enabled LLMs across common and adversarial perturbations"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Maxime Heuillet" }]
+dependencies = [
+    "datasets>=2.20",
+    "huggingface_hub>=0.23",
+    "numpy",
+    "pandas",
+    "pillow",
+]
+
+[project.optional-dependencies]
+# PyTorch models with white-box AutoAttack. AutoAttack is not on PyPI:
+#   pip install git+https://github.com/fra31/auto-attack
+torch = ["torch>=2.0", "timm>=0.9"]
+vlm = ["openai>=1.0"]
+dev = ["pytest"]
+
+[project.scripts]
+robustgenbench = "robustgenbench.cli:main"
+
+[project.urls]
+Dataset = "https://huggingface.co/datasets/legolasflagstaff/RobustGenBench"
+Code = "https://github.com/legolasflagstaff/robust_training"
+
+[tool.setuptools.packages.find]
+include = ["robustgenbench*"]
+
+[tool.setuptools.package-data]
+"robustgenbench.reference_data" = ["*.csv"]

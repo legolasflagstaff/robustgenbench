@@ -1,0 +1,636 @@
+model,dataset,setting,surrogate,accuracy,mode
+gemini-3-flash (no think),caltech101,clean,,0.93,transfer
+gemini-3-flash (no think),caltech101,common,,0.903,transfer
+gemini-3-flash (no think),caltech101,l1_75,clip_vitb16,0.927,transfer
+gemini-3-flash (no think),caltech101,l1_300,clip_vitb16,0.919,transfer
+gemini-3-flash (no think),caltech101,l2_2,clip_vitb16,0.935,transfer
+gemini-3-flash (no think),caltech101,l2_8,clip_vitb16,0.909,transfer
+gemini-3-flash (no think),caltech101,linf_4,clip_vitb16,0.938,transfer
+gemini-3-flash (no think),caltech101,linf_8,clip_vitb16,0.9209999999999999,transfer
+gemini-3-flash (no think),caltech101,linf_30,clip_vitb16,0.868,transfer
+gpt-4o-mini,caltech101,clean,,0.9059999999999999,transfer
+gpt-4o-mini,caltech101,common,,0.8540000000000001,transfer
+gpt-4o-mini,caltech101,l1_75,clip_vitb16,0.9079999999999999,transfer
+gpt-4o-mini,caltech101,l1_300,clip_vitb16,0.903,transfer
+gpt-4o-mini,caltech101,l2_2,clip_vitb16,0.903,transfer
+gpt-4o-mini,caltech101,l2_8,clip_vitb16,0.877,transfer
+gpt-4o-mini,caltech101,linf_4,clip_vitb16,0.894,transfer
+gpt-4o-mini,caltech101,linf_8,clip_vitb16,0.898,transfer
+gpt-4o-mini,caltech101,linf_30,clip_vitb16,0.8029999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,clean,,0.8079999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,common,,0.539,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l1_75,clip_vitb16,0.802,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l1_300,clip_vitb16,0.7959999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l2_2,clip_vitb16,0.7979999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l2_8,clip_vitb16,0.784,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_4,clip_vitb16,0.7929999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_8,clip_vitb16,0.7909999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_30,clip_vitb16,0.7440000000000001,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,clean,,0.45799999999999996,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,common,,0.273,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l1_75,clip_vitb16,0.442,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l1_300,clip_vitb16,0.44299999999999995,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l2_2,clip_vitb16,0.449,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l2_8,clip_vitb16,0.39799999999999996,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_4,clip_vitb16,0.444,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_8,clip_vitb16,0.435,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_30,clip_vitb16,0.382,transfer
+gemini-3-flash (no think),flowers-102,clean,,0.9570000000000001,transfer
+gemini-3-flash (no think),flowers-102,common,,0.8809999999999999,transfer
+gemini-3-flash (no think),flowers-102,l1_75,clip_vitb16,0.956,transfer
+gemini-3-flash (no think),flowers-102,l1_300,clip_vitb16,0.9570000000000001,transfer
+gemini-3-flash (no think),flowers-102,l2_2,clip_vitb16,0.9570000000000001,transfer
+gemini-3-flash (no think),flowers-102,l2_8,clip_vitb16,0.943,transfer
+gemini-3-flash (no think),flowers-102,linf_4,clip_vitb16,0.956,transfer
+gemini-3-flash (no think),flowers-102,linf_8,clip_vitb16,0.953,transfer
+gemini-3-flash (no think),flowers-102,linf_30,clip_vitb16,0.848,transfer
+gpt-4o-mini,flowers-102,clean,,0.737,transfer
+gpt-4o-mini,flowers-102,common,,0.626,transfer
+gpt-4o-mini,flowers-102,l1_75,clip_vitb16,0.743,transfer
+gpt-4o-mini,flowers-102,l1_300,clip_vitb16,0.737,transfer
+gpt-4o-mini,flowers-102,l2_2,clip_vitb16,0.74,transfer
+gpt-4o-mini,flowers-102,l2_8,clip_vitb16,0.682,transfer
+gpt-4o-mini,flowers-102,linf_4,clip_vitb16,0.728,transfer
+gpt-4o-mini,flowers-102,linf_8,clip_vitb16,0.727,transfer
+gpt-4o-mini,flowers-102,linf_30,clip_vitb16,0.544,transfer
+gemini-3-flash (no think),oxford-iiit-pet,clean,,0.965,transfer
+gemini-3-flash (no think),oxford-iiit-pet,common,,0.872,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l1_75,clip_vitb16,0.956,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l1_300,clip_vitb16,0.943,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l2_2,clip_vitb16,0.958,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l2_8,clip_vitb16,0.895,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_4,clip_vitb16,0.9540000000000001,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_8,clip_vitb16,0.948,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_30,clip_vitb16,0.7659999999999999,transfer
+gpt-4o-mini,oxford-iiit-pet,clean,,0.8740000000000001,transfer
+gpt-4o-mini,oxford-iiit-pet,common,,0.7609999999999999,transfer
+gpt-4o-mini,oxford-iiit-pet,l1_75,clip_vitb16,0.84,transfer
+gpt-4o-mini,oxford-iiit-pet,l1_300,clip_vitb16,0.812,transfer
+gpt-4o-mini,oxford-iiit-pet,l2_2,clip_vitb16,0.841,transfer
+gpt-4o-mini,oxford-iiit-pet,l2_8,clip_vitb16,0.711,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_4,clip_vitb16,0.8440000000000001,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_8,clip_vitb16,0.8109999999999999,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_30,clip_vitb16,0.591,transfer
+gemini-3-flash (no think),stanford_cars,clean,,0.9390000000000001,transfer
+gemini-3-flash (no think),stanford_cars,common,,0.765,transfer
+gemini-3-flash (no think),stanford_cars,l1_75,clip_vitb16,0.938,transfer
+gemini-3-flash (no think),stanford_cars,l1_300,clip_vitb16,0.93,transfer
+gemini-3-flash (no think),stanford_cars,l2_2,clip_vitb16,0.938,transfer
+gemini-3-flash (no think),stanford_cars,l2_8,clip_vitb16,0.8909999999999999,transfer
+gemini-3-flash (no think),stanford_cars,linf_4,clip_vitb16,0.938,transfer
+gemini-3-flash (no think),stanford_cars,linf_8,clip_vitb16,0.924,transfer
+gemini-3-flash (no think),stanford_cars,linf_30,clip_vitb16,0.8270000000000001,transfer
+gpt-4o-mini,stanford_cars,clean,,0.722,transfer
+gpt-4o-mini,stanford_cars,common,,0.486,transfer
+gpt-4o-mini,stanford_cars,l1_75,clip_vitb16,0.706,transfer
+gpt-4o-mini,stanford_cars,l1_300,clip_vitb16,0.6759999999999999,transfer
+gpt-4o-mini,stanford_cars,l2_2,clip_vitb16,0.713,transfer
+gpt-4o-mini,stanford_cars,l2_8,clip_vitb16,0.526,transfer
+gpt-4o-mini,stanford_cars,linf_4,clip_vitb16,0.705,transfer
+gpt-4o-mini,stanford_cars,linf_8,clip_vitb16,0.647,transfer
+gpt-4o-mini,stanford_cars,linf_30,clip_vitb16,0.373,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,clean,,0.9070999999999999,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,common,,0.7238,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_75,clip_vitb16,0.8929,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_300,clip_vitb16,0.8833,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_2,clip_vitb16,0.9,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_8,clip_vitb16,0.7976000000000001,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_4,clip_vitb16,0.8929,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_8,clip_vitb16,0.85,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_30,clip_vitb16,0.6476000000000001,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,clean,,0.7762,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,common,,0.6262,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_75,clip_vitb16,0.7762,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_300,clip_vitb16,0.7619,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_2,clip_vitb16,0.7643000000000001,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_8,clip_vitb16,0.7119,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_4,clip_vitb16,0.7595000000000001,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_8,clip_vitb16,0.75,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_30,clip_vitb16,0.5405,transfer
+gemini-3-flash (no think),caltech101,l1_75,clip_vith14,0.9359999999999999,transfer
+gemini-3-flash (no think),caltech101,l1_300,clip_vith14,0.924,transfer
+gemini-3-flash (no think),caltech101,l2_2,clip_vith14,0.922,transfer
+gemini-3-flash (no think),caltech101,l2_8,clip_vith14,0.894,transfer
+gemini-3-flash (no think),caltech101,linf_4,clip_vith14,0.9329999999999999,transfer
+gemini-3-flash (no think),caltech101,linf_8,clip_vith14,0.912,transfer
+gemini-3-flash (no think),caltech101,linf_30,clip_vith14,0.812,transfer
+gpt-4o-mini,caltech101,l1_75,clip_vith14,0.9009999999999999,transfer
+gpt-4o-mini,caltech101,l1_300,clip_vith14,0.894,transfer
+gpt-4o-mini,caltech101,l2_2,clip_vith14,0.8963,transfer
+gpt-4o-mini,caltech101,l2_8,clip_vith14,0.8599,transfer
+gpt-4o-mini,caltech101,linf_4,clip_vith14,0.9,transfer
+gpt-4o-mini,caltech101,linf_8,clip_vith14,0.892,transfer
+gpt-4o-mini,caltech101,linf_30,clip_vith14,0.6920000000000001,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l1_75,clip_vith14,0.8079999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l1_300,clip_vith14,0.789,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l2_2,clip_vith14,0.7959999999999999,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l2_8,clip_vith14,0.753,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_4,clip_vith14,0.778,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_8,clip_vith14,0.787,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_30,clip_vith14,0.6920000000000001,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l1_75,clip_vith14,0.45399999999999996,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l1_300,clip_vith14,0.42700000000000005,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l2_2,clip_vith14,0.433,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l2_8,clip_vith14,0.3872,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_4,clip_vith14,0.45899999999999996,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_8,clip_vith14,0.41100000000000003,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_30,clip_vith14,0.28800000000000003,transfer
+gemini-3-flash (no think),flowers-102,l1_75,clip_vith14,0.956,transfer
+gemini-3-flash (no think),flowers-102,l1_300,clip_vith14,0.955,transfer
+gemini-3-flash (no think),flowers-102,l2_2,clip_vith14,0.9540000000000001,transfer
+gemini-3-flash (no think),flowers-102,l2_8,clip_vith14,0.925,transfer
+gemini-3-flash (no think),flowers-102,linf_4,clip_vith14,0.953,transfer
+gemini-3-flash (no think),flowers-102,linf_8,clip_vith14,0.948,transfer
+gemini-3-flash (no think),flowers-102,linf_30,clip_vith14,0.721,transfer
+gpt-4o-mini,flowers-102,l1_75,clip_vith14,0.7440000000000001,transfer
+gpt-4o-mini,flowers-102,l1_300,clip_vith14,0.7240000000000001,transfer
+gpt-4o-mini,flowers-102,l2_2,clip_vith14,0.72,transfer
+gpt-4o-mini,flowers-102,l2_8,clip_vith14,0.608,transfer
+gpt-4o-mini,flowers-102,linf_4,clip_vith14,0.723,transfer
+gpt-4o-mini,flowers-102,linf_8,clip_vith14,0.669,transfer
+gpt-4o-mini,flowers-102,linf_30,clip_vith14,0.33299999999999996,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l1_75,clip_vith14,0.948,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l1_300,clip_vith14,0.934,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l2_2,clip_vith14,0.9470000000000001,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l2_8,clip_vith14,0.8340000000000001,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_4,clip_vith14,0.946,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_8,clip_vith14,0.9159999999999999,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_30,clip_vith14,0.54,transfer
+gpt-4o-mini,oxford-iiit-pet,l1_75,clip_vith14,0.8340000000000001,transfer
+gpt-4o-mini,oxford-iiit-pet,l1_300,clip_vith14,0.757,transfer
+gpt-4o-mini,oxford-iiit-pet,l2_2,clip_vith14,0.809,transfer
+gpt-4o-mini,oxford-iiit-pet,l2_8,clip_vith14,0.585,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_4,clip_vith14,0.825,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_8,clip_vith14,0.752,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_30,clip_vith14,0.33899999999999997,transfer
+gemini-3-flash (no think),stanford_cars,l1_75,clip_vith14,0.9359999999999999,transfer
+gemini-3-flash (no think),stanford_cars,l1_300,clip_vith14,0.922,transfer
+gemini-3-flash (no think),stanford_cars,l2_2,clip_vith14,0.924,transfer
+gemini-3-flash (no think),stanford_cars,l2_8,clip_vith14,0.882,transfer
+gemini-3-flash (no think),stanford_cars,linf_4,clip_vith14,0.932,transfer
+gemini-3-flash (no think),stanford_cars,linf_8,clip_vith14,0.9059999999999999,transfer
+gemini-3-flash (no think),stanford_cars,linf_30,clip_vith14,0.7390000000000001,transfer
+gpt-4o-mini,stanford_cars,l1_75,clip_vith14,0.713,transfer
+gpt-4o-mini,stanford_cars,l1_300,clip_vith14,0.6679999999999999,transfer
+gpt-4o-mini,stanford_cars,l2_2,clip_vith14,0.696,transfer
+gpt-4o-mini,stanford_cars,l2_8,clip_vith14,0.526,transfer
+gpt-4o-mini,stanford_cars,linf_4,clip_vith14,0.695,transfer
+gpt-4o-mini,stanford_cars,linf_8,clip_vith14,0.64,transfer
+gpt-4o-mini,stanford_cars,linf_30,clip_vith14,0.27399999999999997,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_75,clip_vith14,0.8976000000000001,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_300,clip_vith14,0.8905,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_2,clip_vith14,0.8833,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_8,clip_vith14,0.7833,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_4,clip_vith14,0.8952,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_8,clip_vith14,0.8523999999999999,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_30,clip_vith14,0.5095000000000001,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_75,clip_vith14,0.7762,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_300,clip_vith14,0.7525,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_2,clip_vith14,0.7570999999999999,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_8,clip_vith14,0.6,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_4,clip_vith14,0.7619,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_8,clip_vith14,0.7,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_30,clip_vith14,0.3643,transfer
+gemini-3-flash (no think),caltech101,l1_75,metaclip_vith14,0.932,transfer
+gemini-3-flash (no think),caltech101,l1_300,metaclip_vith14,0.9229999999999999,transfer
+gemini-3-flash (no think),caltech101,l2_2,metaclip_vith14,0.924,transfer
+gemini-3-flash (no think),caltech101,l2_8,metaclip_vith14,0.9109999999999999,transfer
+gemini-3-flash (no think),caltech101,linf_4,metaclip_vith14,0.9209999999999999,transfer
+gemini-3-flash (no think),caltech101,linf_8,metaclip_vith14,0.93,transfer
+gemini-3-flash (no think),caltech101,linf_30,metaclip_vith14,0.8640000000000001,transfer
+gpt-4o-mini,caltech101,l1_75,metaclip_vith14,0.9059999999999999,transfer
+gpt-4o-mini,caltech101,l1_300,metaclip_vith14,0.897,transfer
+gpt-4o-mini,caltech101,l2_2,metaclip_vith14,0.904,transfer
+gpt-4o-mini,caltech101,l2_8,metaclip_vith14,0.878,transfer
+gpt-4o-mini,caltech101,linf_4,metaclip_vith14,0.9009999999999999,transfer
+gpt-4o-mini,caltech101,linf_8,metaclip_vith14,0.884,transfer
+gpt-4o-mini,caltech101,linf_30,metaclip_vith14,0.76,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l1_75,metaclip_vith14,0.805,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l1_300,metaclip_vith14,0.785,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l2_2,metaclip_vith14,0.792,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,l2_8,metaclip_vith14,0.775,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_4,metaclip_vith14,0.8,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_8,metaclip_vith14,0.787,transfer
+gemini-3-flash (no think),fgvc-aircraft-2013b,linf_30,metaclip_vith14,0.6729999999999999,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l1_75,metaclip_vith14,0.44299999999999995,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l1_300,metaclip_vith14,0.433,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l2_2,metaclip_vith14,0.44299999999999995,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,l2_8,metaclip_vith14,0.408,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_4,metaclip_vith14,0.452,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_8,metaclip_vith14,0.41700000000000004,transfer
+gpt-4o-mini,fgvc-aircraft-2013b,linf_30,metaclip_vith14,0.292,transfer
+gemini-3-flash (no think),flowers-102,l1_75,metaclip_vith14,0.956,transfer
+gemini-3-flash (no think),flowers-102,l1_300,metaclip_vith14,0.955,transfer
+gemini-3-flash (no think),flowers-102,l2_2,metaclip_vith14,0.946,transfer
+gemini-3-flash (no think),flowers-102,l2_8,metaclip_vith14,0.9390000000000001,transfer
+gemini-3-flash (no think),flowers-102,linf_4,metaclip_vith14,0.958,transfer
+gemini-3-flash (no think),flowers-102,linf_8,metaclip_vith14,0.9490000000000001,transfer
+gemini-3-flash (no think),flowers-102,linf_30,metaclip_vith14,0.779,transfer
+gpt-4o-mini,flowers-102,l1_75,metaclip_vith14,0.736,transfer
+gpt-4o-mini,flowers-102,l1_300,metaclip_vith14,0.7240000000000001,transfer
+gpt-4o-mini,flowers-102,l2_2,metaclip_vith14,0.72,transfer
+gpt-4o-mini,flowers-102,l2_8,metaclip_vith14,0.637,transfer
+gpt-4o-mini,flowers-102,linf_4,metaclip_vith14,0.7090000000000001,transfer
+gpt-4o-mini,flowers-102,linf_8,metaclip_vith14,0.688,transfer
+gpt-4o-mini,flowers-102,linf_30,metaclip_vith14,0.43,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l1_75,metaclip_vith14,0.9570000000000001,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l1_300,metaclip_vith14,0.932,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l2_2,metaclip_vith14,0.9490000000000001,transfer
+gemini-3-flash (no think),oxford-iiit-pet,l2_8,metaclip_vith14,0.879,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_4,metaclip_vith14,0.9420000000000001,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_8,metaclip_vith14,0.9229999999999999,transfer
+gemini-3-flash (no think),oxford-iiit-pet,linf_30,metaclip_vith14,0.626,transfer
+gpt-4o-mini,oxford-iiit-pet,l1_75,metaclip_vith14,0.83,transfer
+gpt-4o-mini,oxford-iiit-pet,l1_300,metaclip_vith14,0.785,transfer
+gpt-4o-mini,oxford-iiit-pet,l2_2,metaclip_vith14,0.81,transfer
+gpt-4o-mini,oxford-iiit-pet,l2_8,metaclip_vith14,0.6890000000000001,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_4,metaclip_vith14,0.809,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_8,metaclip_vith14,0.736,transfer
+gpt-4o-mini,oxford-iiit-pet,linf_30,metaclip_vith14,0.428,transfer
+gemini-3-flash (no think),stanford_cars,l1_75,metaclip_vith14,0.934,transfer
+gemini-3-flash (no think),stanford_cars,l1_300,metaclip_vith14,0.9259999999999999,transfer
+gemini-3-flash (no think),stanford_cars,l2_2,metaclip_vith14,0.9309999999999999,transfer
+gemini-3-flash (no think),stanford_cars,l2_8,metaclip_vith14,0.9129999999999999,transfer
+gemini-3-flash (no think),stanford_cars,linf_4,metaclip_vith14,0.937,transfer
+gemini-3-flash (no think),stanford_cars,linf_8,metaclip_vith14,0.925,transfer
+gemini-3-flash (no think),stanford_cars,linf_30,metaclip_vith14,0.797,transfer
+gpt-4o-mini,stanford_cars,l1_75,metaclip_vith14,0.7240000000000001,transfer
+gpt-4o-mini,stanford_cars,l1_300,metaclip_vith14,0.6859999999999999,transfer
+gpt-4o-mini,stanford_cars,l2_2,metaclip_vith14,0.6970000000000001,transfer
+gpt-4o-mini,stanford_cars,l2_8,metaclip_vith14,0.601,transfer
+gpt-4o-mini,stanford_cars,linf_4,metaclip_vith14,0.6829999999999999,transfer
+gpt-4o-mini,stanford_cars,linf_8,metaclip_vith14,0.632,transfer
+gpt-4o-mini,stanford_cars,linf_30,metaclip_vith14,0.33899999999999997,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_75,metaclip_vith14,0.9024,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_300,metaclip_vith14,0.8643000000000001,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_2,metaclip_vith14,0.8881,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_8,metaclip_vith14,0.8048000000000001,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_4,metaclip_vith14,0.8856999999999999,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_8,metaclip_vith14,0.8332999999999999,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_30,metaclip_vith14,0.5262,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_75,metaclip_vith14,0.7619,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_300,metaclip_vith14,0.731,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_2,metaclip_vith14,0.7548,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_8,metaclip_vith14,0.6262,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_4,metaclip_vith14,0.7548,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_8,metaclip_vith14,0.6929000000000001,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_30,metaclip_vith14,0.3833,transfer
+gemini-3-flash (no think),caltech101,l1_75,siglip2_so400m,0.9259999999999999,transfer
+gemini-3-flash (no think),caltech101,l1_300,siglip2_so400m,0.9259999999999999,transfer
+gemini-3-flash (no think),caltech101,l2_2,siglip2_so400m,0.915,transfer
+gemini-3-flash (no think),caltech101,l2_8,siglip2_so400m,0.89,transfer
+gemini-3-flash (no think),caltech101,linf_4,siglip2_so400m,0.915,transfer
+gemini-3-flash (no think),caltech101,linf_8,siglip2_so400m,0.915,transfer
+gemini-3-flash (no think),caltech101,linf_30,siglip2_so400m,0.7190000000000001,transfer
+gpt-4o-mini,caltech101,l1_75,siglip2_so400m,0.9079999999999999,transfer
+gpt-4o-mini,caltech101,l1_300,siglip2_so400m,0.884,transfer
+gpt-4o-mini,caltech101,l2_2,siglip2_so400m,0.9009999999999999,transfer
+gpt-4o-mini,caltech101,l2_8,siglip2_so400m,0.856,transfer
+gpt-4o-mini,caltech101,linf_4,siglip2_so400m,0.898,transfer
+gpt-4o-mini,caltech101,linf_8,siglip2_so400m,0.8835,transfer
+gpt-4o-mini,caltech101,linf_30,siglip2_so400m,0.653,transfer
+gemini-3-flash (no think),flowers-102,l1_75,siglip2_so400m,0.958,transfer
+gemini-3-flash (no think),flowers-102,l1_300,siglip2_so400m,0.9520000000000001,transfer
+gemini-3-flash (no think),flowers-102,l2_2,siglip2_so400m,0.953,transfer
+gemini-3-flash (no think),flowers-102,l2_8,siglip2_so400m,0.883,transfer
+gemini-3-flash (no think),flowers-102,linf_4,siglip2_so400m,0.9520000000000001,transfer
+gemini-3-flash (no think),flowers-102,linf_8,siglip2_so400m,0.9309999999999999,transfer
+gemini-3-flash (no think),flowers-102,linf_30,siglip2_so400m,0.562,transfer
+gpt-4o-mini,flowers-102,l1_75,siglip2_so400m,0.746,transfer
+gpt-4o-mini,flowers-102,l1_300,siglip2_so400m,0.727,transfer
+gpt-4o-mini,flowers-102,l2_2,siglip2_so400m,0.727,transfer
+gpt-4o-mini,flowers-102,linf_4,siglip2_so400m,0.7240000000000001,transfer
+gpt-4o-mini,flowers-102,linf_8,siglip2_so400m,0.677,transfer
+gpt-4o-mini,flowers-102,linf_30,siglip2_so400m,0.35200000000000004,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_75,siglip2_so400m,0.8881,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l1_300,siglip2_so400m,0.8667,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_2,siglip2_so400m,0.8690000000000001,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,l2_8,siglip2_so400m,0.7023999999999999,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_4,siglip2_so400m,0.8786,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_8,siglip2_so400m,0.7786,transfer
+gemini-3-flash (no think),uc-merced-land-use-dataset,linf_30,siglip2_so400m,0.35479999999999995,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_75,siglip2_so400m,0.7524,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l1_300,siglip2_so400m,0.7356999999999999,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_2,siglip2_so400m,0.7619,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,l2_8,siglip2_so400m,0.6024,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_4,siglip2_so400m,0.7452,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_8,siglip2_so400m,0.6905,transfer
+gpt-4o-mini,uc-merced-land-use-dataset,linf_30,siglip2_so400m,0.2943,transfer
+kimi-k2.5,caltech101,clean,,0.904,transfer
+kimi-k2.5,caltech101,common,,0.832,transfer
+kimi-k2.5,fgvc-aircraft-2013b,clean,,0.82,transfer
+kimi-k2.5,fgvc-aircraft-2013b,common,,0.453,transfer
+kimi-k2.5,flowers-102,clean,,0.887,transfer
+kimi-k2.5,flowers-102,common,,0.754,transfer
+kimi-k2.5,oxford-iiit-pet,clean,,0.932,transfer
+kimi-k2.5,oxford-iiit-pet,common,,0.78,transfer
+kimi-k2.5,stanford_cars,clean,,0.892,transfer
+kimi-k2.5,stanford_cars,common,,0.634,transfer
+kimi-k2.5,uc-merced-land-use-dataset,clean,,0.7738,transfer
+kimi-k2.5,uc-merced-land-use-dataset,common,,0.5286,transfer
+kimi-k2.5,caltech101,l1_75,clip_vitb16,0.902,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l1_75,clip_vitb16,0.805,transfer
+kimi-k2.5,flowers-102,l1_75,clip_vitb16,0.881,transfer
+kimi-k2.5,oxford-iiit-pet,l1_75,clip_vitb16,0.92,transfer
+kimi-k2.5,stanford_cars,l1_75,clip_vitb16,0.866,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_75,clip_vitb16,0.7286,transfer
+kimi-k2.5,caltech101,l1_300,clip_vitb16,0.907,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l1_300,clip_vitb16,0.799,transfer
+kimi-k2.5,flowers-102,l1_300,clip_vitb16,0.882,transfer
+kimi-k2.5,oxford-iiit-pet,l1_300,clip_vitb16,0.9,transfer
+kimi-k2.5,stanford_cars,l1_300,clip_vitb16,0.836,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_300,clip_vitb16,0.7238,transfer
+kimi-k2.5,caltech101,l2_2,clip_vitb16,0.9,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l2_2,clip_vitb16,0.812,transfer
+kimi-k2.5,flowers-102,l2_2,clip_vitb16,0.882,transfer
+kimi-k2.5,oxford-iiit-pet,l2_2,clip_vitb16,0.913,transfer
+kimi-k2.5,stanford_cars,l2_2,clip_vitb16,0.877,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_2,clip_vitb16,0.719,transfer
+kimi-k2.5,caltech101,l2_8,clip_vitb16,0.878,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l2_8,clip_vitb16,0.776,transfer
+kimi-k2.5,flowers-102,l2_8,clip_vitb16,0.851,transfer
+kimi-k2.5,oxford-iiit-pet,l2_8,clip_vitb16,0.814,transfer
+kimi-k2.5,stanford_cars,l2_8,clip_vitb16,0.721,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_8,clip_vitb16,0.6429,transfer
+kimi-k2.5,caltech101,linf_4,clip_vitb16,0.897,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_4,clip_vitb16,0.814,transfer
+kimi-k2.5,flowers-102,linf_4,clip_vitb16,0.887,transfer
+kimi-k2.5,oxford-iiit-pet,linf_4,clip_vitb16,0.923,transfer
+kimi-k2.5,stanford_cars,linf_4,clip_vitb16,0.875,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_4,clip_vitb16,0.7452,transfer
+kimi-k2.5,caltech101,linf_8,clip_vitb16,0.904,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_8,clip_vitb16,0.802,transfer
+kimi-k2.5,flowers-102,linf_8,clip_vitb16,0.879,transfer
+kimi-k2.5,oxford-iiit-pet,linf_8,clip_vitb16,0.895,transfer
+kimi-k2.5,stanford_cars,linf_8,clip_vitb16,0.844,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_8,clip_vitb16,0.7214,transfer
+kimi-k2.5,caltech101,linf_30,clip_vitb16,0.798,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_30,clip_vitb16,0.752,transfer
+kimi-k2.5,flowers-102,linf_30,clip_vitb16,0.712,transfer
+kimi-k2.5,oxford-iiit-pet,linf_30,clip_vitb16,0.675,transfer
+kimi-k2.5,stanford_cars,linf_30,clip_vitb16,0.594,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_30,clip_vitb16,0.481,transfer
+kimi-k2.5,caltech101,l1_75,clip_vith14,0.901,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l1_75,clip_vith14,0.81,transfer
+kimi-k2.5,flowers-102,l1_75,clip_vith14,0.881,transfer
+kimi-k2.5,oxford-iiit-pet,l1_75,clip_vith14,0.9,transfer
+kimi-k2.5,stanford_cars,l1_75,clip_vith14,0.863,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_75,clip_vith14,0.7333,transfer
+kimi-k2.5,caltech101,l1_300,clip_vith14,0.898,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l1_300,clip_vith14,0.778,transfer
+kimi-k2.5,flowers-102,l1_300,clip_vith14,0.866,transfer
+kimi-k2.5,oxford-iiit-pet,l1_300,clip_vith14,0.833,transfer
+kimi-k2.5,stanford_cars,l1_300,clip_vith14,0.803,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_300,clip_vith14,0.7024,transfer
+kimi-k2.5,caltech101,l2_2,clip_vith14,0.904,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l2_2,clip_vith14,0.801,transfer
+kimi-k2.5,flowers-102,l2_2,clip_vith14,0.878,transfer
+kimi-k2.5,oxford-iiit-pet,l2_2,clip_vith14,0.883,transfer
+kimi-k2.5,stanford_cars,l2_2,clip_vith14,0.845,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_2,clip_vith14,0.7357,transfer
+kimi-k2.5,caltech101,l2_8,clip_vith14,0.825,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l2_8,clip_vith14,0.709,transfer
+kimi-k2.5,flowers-102,l2_8,clip_vith14,0.746,transfer
+kimi-k2.5,oxford-iiit-pet,l2_8,clip_vith14,0.596,transfer
+kimi-k2.5,stanford_cars,l2_8,clip_vith14,0.617,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_8,clip_vith14,0.5143,transfer
+kimi-k2.5,caltech101,linf_4,clip_vith14,0.904,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_4,clip_vith14,0.788,transfer
+kimi-k2.5,flowers-102,linf_4,clip_vith14,0.873,transfer
+kimi-k2.5,oxford-iiit-pet,linf_4,clip_vith14,0.884,transfer
+kimi-k2.5,stanford_cars,linf_4,clip_vith14,0.845,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_4,clip_vith14,0.719,transfer
+kimi-k2.5,caltech101,linf_8,clip_vith14,0.879,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_8,clip_vith14,0.758,transfer
+kimi-k2.5,flowers-102,linf_8,clip_vith14,0.842,transfer
+kimi-k2.5,oxford-iiit-pet,linf_8,clip_vith14,0.785,transfer
+kimi-k2.5,stanford_cars,linf_8,clip_vith14,0.778,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_8,clip_vith14,0.6595,transfer
+kimi-k2.5,caltech101,linf_30,clip_vith14,0.538,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_30,clip_vith14,0.547,transfer
+kimi-k2.5,flowers-102,linf_30,clip_vith14,0.323,transfer
+kimi-k2.5,oxford-iiit-pet,linf_30,clip_vith14,0.178,transfer
+kimi-k2.5,stanford_cars,linf_30,clip_vith14,0.267,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_30,clip_vith14,0.2452,transfer
+kimi-k2.5,caltech101,l1_75,metaclip_vith14,0.902,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l1_75,metaclip_vith14,0.811,transfer
+kimi-k2.5,flowers-102,l1_75,metaclip_vith14,0.876,transfer
+kimi-k2.5,oxford-iiit-pet,l1_75,metaclip_vith14,0.904,transfer
+kimi-k2.5,stanford_cars,l1_75,metaclip_vith14,0.874,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_75,metaclip_vith14,0.7357,transfer
+kimi-k2.5,caltech101,l1_300,metaclip_vith14,0.9,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l1_300,metaclip_vith14,0.785,transfer
+kimi-k2.5,flowers-102,l1_300,metaclip_vith14,0.876,transfer
+kimi-k2.5,oxford-iiit-pet,l1_300,metaclip_vith14,0.854,transfer
+kimi-k2.5,stanford_cars,l1_300,metaclip_vith14,0.842,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_300,metaclip_vith14,0.6929,transfer
+kimi-k2.5,caltech101,l2_2,metaclip_vith14,0.901,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l2_2,metaclip_vith14,0.798,transfer
+kimi-k2.5,flowers-102,l2_2,metaclip_vith14,0.865,transfer
+kimi-k2.5,oxford-iiit-pet,l2_2,metaclip_vith14,0.887,transfer
+kimi-k2.5,stanford_cars,l2_2,metaclip_vith14,0.853,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_2,metaclip_vith14,0.7381,transfer
+kimi-k2.5,caltech101,l2_8,metaclip_vith14,0.867,transfer
+kimi-k2.5,fgvc-aircraft-2013b,l2_8,metaclip_vith14,0.742,transfer
+kimi-k2.5,flowers-102,l2_8,metaclip_vith14,0.794,transfer
+kimi-k2.5,oxford-iiit-pet,l2_8,metaclip_vith14,0.713,transfer
+kimi-k2.5,stanford_cars,l2_8,metaclip_vith14,0.728,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_8,metaclip_vith14,0.5048,transfer
+kimi-k2.5,caltech101,linf_4,metaclip_vith14,0.903,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_4,metaclip_vith14,0.789,transfer
+kimi-k2.5,flowers-102,linf_4,metaclip_vith14,0.866,transfer
+kimi-k2.5,oxford-iiit-pet,linf_4,metaclip_vith14,0.885,transfer
+kimi-k2.5,stanford_cars,linf_4,metaclip_vith14,0.853,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_4,metaclip_vith14,0.7452,transfer
+kimi-k2.5,caltech101,linf_8,metaclip_vith14,0.887,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_8,metaclip_vith14,0.739,transfer
+kimi-k2.5,flowers-102,linf_8,metaclip_vith14,0.845,transfer
+kimi-k2.5,oxford-iiit-pet,linf_8,metaclip_vith14,0.791,transfer
+kimi-k2.5,stanford_cars,linf_8,metaclip_vith14,0.793,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_8,metaclip_vith14,0.6381,transfer
+kimi-k2.5,caltech101,linf_30,metaclip_vith14,0.652,transfer
+kimi-k2.5,fgvc-aircraft-2013b,linf_30,metaclip_vith14,0.491,transfer
+kimi-k2.5,flowers-102,linf_30,metaclip_vith14,0.427,transfer
+kimi-k2.5,oxford-iiit-pet,linf_30,metaclip_vith14,0.251,transfer
+kimi-k2.5,stanford_cars,linf_30,metaclip_vith14,0.37,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_30,metaclip_vith14,0.2357,transfer
+kimi-k2.5,caltech101,l1_75,siglip2_so400m,0.902,transfer
+kimi-k2.5,flowers-102,l1_75,siglip2_so400m,0.881,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_75,siglip2_so400m,0.7405,transfer
+kimi-k2.5,caltech101,l1_300,siglip2_so400m,0.907,transfer
+kimi-k2.5,flowers-102,l1_300,siglip2_so400m,0.884,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l1_300,siglip2_so400m,0.6857,transfer
+kimi-k2.5,caltech101,l2_2,siglip2_so400m,0.904,transfer
+kimi-k2.5,flowers-102,l2_2,siglip2_so400m,0.874,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_2,siglip2_so400m,0.7381,transfer
+kimi-k2.5,caltech101,l2_8,siglip2_so400m,0.887,transfer
+kimi-k2.5,flowers-102,l2_8,siglip2_so400m,0.841,transfer
+kimi-k2.5,uc-merced-land-use-dataset,l2_8,siglip2_so400m,0.6167,transfer
+kimi-k2.5,caltech101,linf_4,siglip2_so400m,0.904,transfer
+kimi-k2.5,flowers-102,linf_4,siglip2_so400m,0.88,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_4,siglip2_so400m,0.7405,transfer
+kimi-k2.5,caltech101,linf_8,siglip2_so400m,0.902,transfer
+kimi-k2.5,flowers-102,linf_8,siglip2_so400m,0.874,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_8,siglip2_so400m,0.6881,transfer
+kimi-k2.5,caltech101,linf_30,siglip2_so400m,0.77,transfer
+kimi-k2.5,flowers-102,linf_30,siglip2_so400m,0.63,transfer
+kimi-k2.5,uc-merced-land-use-dataset,linf_30,siglip2_so400m,0.381,transfer
+qwen3-vl-235b-a22b,caltech101,clean,,0.926,transfer
+qwen3-vl-235b-a22b,caltech101,common,,0.872,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,clean,,0.355,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,common,,0.199,transfer
+qwen3-vl-235b-a22b,flowers-102,clean,,0.878,transfer
+qwen3-vl-235b-a22b,flowers-102,common,,0.736,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,clean,,0.881,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,common,,0.767,transfer
+qwen3-vl-235b-a22b,stanford_cars,clean,,0.743,transfer
+qwen3-vl-235b-a22b,stanford_cars,common,,0.471,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,clean,,0.8024,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,common,,0.5595,transfer
+qwen3-vl-235b-a22b,caltech101,l1_75,clip_vitb16,0.923,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l1_75,clip_vitb16,0.356,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_75,clip_vitb16,0.872,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l1_75,clip_vitb16,0.866,transfer
+qwen3-vl-235b-a22b,stanford_cars,l1_75,clip_vitb16,0.694,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_75,clip_vitb16,0.7952,transfer
+qwen3-vl-235b-a22b,caltech101,l1_300,clip_vitb16,0.929,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l1_300,clip_vitb16,0.335,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_300,clip_vitb16,0.863,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l1_300,clip_vitb16,0.841,transfer
+qwen3-vl-235b-a22b,stanford_cars,l1_300,clip_vitb16,0.64,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_300,clip_vitb16,0.7738,transfer
+qwen3-vl-235b-a22b,caltech101,l2_2,clip_vitb16,0.928,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l2_2,clip_vitb16,0.35,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_2,clip_vitb16,0.87,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l2_2,clip_vitb16,0.868,transfer
+qwen3-vl-235b-a22b,stanford_cars,l2_2,clip_vitb16,0.678,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_2,clip_vitb16,0.7881,transfer
+qwen3-vl-235b-a22b,caltech101,l2_8,clip_vitb16,0.901,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l2_8,clip_vitb16,0.313,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_8,clip_vitb16,0.838,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l2_8,clip_vitb16,0.726,transfer
+qwen3-vl-235b-a22b,stanford_cars,l2_8,clip_vitb16,0.503,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_8,clip_vitb16,0.65,transfer
+qwen3-vl-235b-a22b,caltech101,linf_4,clip_vitb16,0.927,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_4,clip_vitb16,0.342,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_4,clip_vitb16,0.868,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_4,clip_vitb16,0.868,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_4,clip_vitb16,0.685,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_4,clip_vitb16,0.7667,transfer
+qwen3-vl-235b-a22b,caltech101,linf_8,clip_vitb16,0.925,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_8,clip_vitb16,0.328,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_8,clip_vitb16,0.86,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_8,clip_vitb16,0.842,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_8,clip_vitb16,0.637,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_8,clip_vitb16,0.7452,transfer
+qwen3-vl-235b-a22b,caltech101,linf_30,clip_vitb16,0.854,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_30,clip_vitb16,0.303,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_30,clip_vitb16,0.716,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_30,clip_vitb16,0.641,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_30,clip_vitb16,0.423,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_30,clip_vitb16,0.5071,transfer
+qwen3-vl-235b-a22b,caltech101,l1_75,clip_vith14,0.927,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l1_75,clip_vith14,0.356,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_75,clip_vith14,0.865,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l1_75,clip_vith14,0.852,transfer
+qwen3-vl-235b-a22b,stanford_cars,l1_75,clip_vith14,0.705,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_75,clip_vith14,0.7833,transfer
+qwen3-vl-235b-a22b,caltech101,l1_300,clip_vith14,0.919,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l1_300,clip_vith14,0.322,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_300,clip_vith14,0.856,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l1_300,clip_vith14,0.795,transfer
+qwen3-vl-235b-a22b,stanford_cars,l1_300,clip_vith14,0.612,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_300,clip_vith14,0.7476,transfer
+qwen3-vl-235b-a22b,caltech101,l2_2,clip_vith14,0.917,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l2_2,clip_vith14,0.342,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_2,clip_vith14,0.862,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l2_2,clip_vith14,0.844,transfer
+qwen3-vl-235b-a22b,stanford_cars,l2_2,clip_vith14,0.663,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_2,clip_vith14,0.7548,transfer
+qwen3-vl-235b-a22b,caltech101,l2_8,clip_vith14,0.835,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l2_8,clip_vith14,0.259,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_8,clip_vith14,0.706,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l2_8,clip_vith14,0.494,transfer
+qwen3-vl-235b-a22b,stanford_cars,l2_8,clip_vith14,0.394,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_8,clip_vith14,0.5143,transfer
+qwen3-vl-235b-a22b,caltech101,linf_4,clip_vith14,0.923,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_4,clip_vith14,0.331,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_4,clip_vith14,0.866,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_4,clip_vith14,0.832,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_4,clip_vith14,0.656,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_4,clip_vith14,0.7452,transfer
+qwen3-vl-235b-a22b,caltech101,linf_8,clip_vith14,0.893,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_8,clip_vith14,0.316,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_8,clip_vith14,0.807,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_8,clip_vith14,0.732,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_8,clip_vith14,0.537,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_8,clip_vith14,0.669,transfer
+qwen3-vl-235b-a22b,caltech101,linf_30,clip_vith14,0.613,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_30,clip_vith14,0.217,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_30,clip_vith14,0.382,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_30,clip_vith14,0.238,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_30,clip_vith14,0.196,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_30,clip_vith14,0.3476,transfer
+qwen3-vl-235b-a22b,caltech101,l1_75,metaclip_vith14,0.924,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l1_75,metaclip_vith14,0.345,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_75,metaclip_vith14,0.87,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l1_75,metaclip_vith14,0.855,transfer
+qwen3-vl-235b-a22b,stanford_cars,l1_75,metaclip_vith14,0.707,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_75,metaclip_vith14,0.7714,transfer
+qwen3-vl-235b-a22b,caltech101,l1_300,metaclip_vith14,0.925,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l1_300,metaclip_vith14,0.32,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_300,metaclip_vith14,0.843,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l1_300,metaclip_vith14,0.82,transfer
+qwen3-vl-235b-a22b,stanford_cars,l1_300,metaclip_vith14,0.653,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_300,metaclip_vith14,0.75,transfer
+qwen3-vl-235b-a22b,caltech101,l2_2,metaclip_vith14,0.924,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l2_2,metaclip_vith14,0.326,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_2,metaclip_vith14,0.86,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l2_2,metaclip_vith14,0.845,transfer
+qwen3-vl-235b-a22b,stanford_cars,l2_2,metaclip_vith14,0.671,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_2,metaclip_vith14,0.7548,transfer
+qwen3-vl-235b-a22b,caltech101,l2_8,metaclip_vith14,0.878,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,l2_8,metaclip_vith14,0.283,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_8,metaclip_vith14,0.758,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,l2_8,metaclip_vith14,0.629,transfer
+qwen3-vl-235b-a22b,stanford_cars,l2_8,metaclip_vith14,0.478,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_8,metaclip_vith14,0.4905,transfer
+qwen3-vl-235b-a22b,caltech101,linf_4,metaclip_vith14,0.921,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_4,metaclip_vith14,0.332,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_4,metaclip_vith14,0.857,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_4,metaclip_vith14,0.833,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_4,metaclip_vith14,0.645,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_4,metaclip_vith14,0.7476,transfer
+qwen3-vl-235b-a22b,caltech101,linf_8,metaclip_vith14,0.907,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_8,metaclip_vith14,0.3,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_8,metaclip_vith14,0.799,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_8,metaclip_vith14,0.729,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_8,metaclip_vith14,0.574,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_8,metaclip_vith14,0.6262,transfer
+qwen3-vl-235b-a22b,caltech101,linf_30,metaclip_vith14,0.718,transfer
+qwen3-vl-235b-a22b,fgvc-aircraft-2013b,linf_30,metaclip_vith14,0.203,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_30,metaclip_vith14,0.449,transfer
+qwen3-vl-235b-a22b,oxford-iiit-pet,linf_30,metaclip_vith14,0.31,transfer
+qwen3-vl-235b-a22b,stanford_cars,linf_30,metaclip_vith14,0.267,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_30,metaclip_vith14,0.3119,transfer
+qwen3-vl-235b-a22b,caltech101,l1_75,siglip2_so400m,0.925,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_75,siglip2_so400m,0.871,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_75,siglip2_so400m,0.7762,transfer
+qwen3-vl-235b-a22b,caltech101,l1_300,siglip2_so400m,0.918,transfer
+qwen3-vl-235b-a22b,flowers-102,l1_300,siglip2_so400m,0.868,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l1_300,siglip2_so400m,0.7405,transfer
+qwen3-vl-235b-a22b,caltech101,l2_2,siglip2_so400m,0.926,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_2,siglip2_so400m,0.862,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_2,siglip2_so400m,0.7643,transfer
+qwen3-vl-235b-a22b,caltech101,l2_8,siglip2_so400m,0.905,transfer
+qwen3-vl-235b-a22b,flowers-102,l2_8,siglip2_so400m,0.815,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,l2_8,siglip2_so400m,0.5619,transfer
+qwen3-vl-235b-a22b,caltech101,linf_4,siglip2_so400m,0.927,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_4,siglip2_so400m,0.865,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_4,siglip2_so400m,0.7643,transfer
+qwen3-vl-235b-a22b,caltech101,linf_8,siglip2_so400m,0.925,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_8,siglip2_so400m,0.849,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_8,siglip2_so400m,0.6905,transfer
+qwen3-vl-235b-a22b,caltech101,linf_30,siglip2_so400m,0.804,transfer
+qwen3-vl-235b-a22b,flowers-102,linf_30,siglip2_so400m,0.583,transfer
+qwen3-vl-235b-a22b,uc-merced-land-use-dataset,linf_30,siglip2_so400m,0.4,transfer
