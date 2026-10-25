@@ -129,7 +129,11 @@ panel_a = [
     ("GPT-4o mini", [llm_sum("GPT-4o", c) for _, c, _, _ in MODEL_INDEP], False),
     ("Kimi K2.5", [open_sum("kimi", c) for _, c, _, _ in MODEL_INDEP], False),
     ("Qwen3 VL 235B", [open_sum("qwen", c) for _, c, _, _ in MODEL_INDEP], False),
-    ("ConvNeXt-B", [convnext_wb_sum(f) for _, _, f, _ in MODEL_INDEP], False),
+    # ConvNeXt-B on the exact clean/common images the Ve-LLMs were evaluated
+    # on, so panel (a) compares identical inputs. The Oracle needs all 80
+    # FFT-50 configurations, which were only evaluated on the study's images
+    # (fft50.csv); the caption states this.
+    ("ConvNeXt-B", [convnext_eval_sum(lbl) for lbl in ("clean", "common__common_severity3")], False),
     ("Oracle", [oracle_sum(f) for _, _, f, _ in MODEL_INDEP], False),
 ]
 panel_b = [
@@ -154,14 +158,27 @@ import sys
 sys.path.insert(0, str(HERE))
 from paper_style import FIG_WIDTH, apply_rcparams, grouped_bars, legend_above, legend_handle
 
+# --wide: panels side by side at full text width (NeurIPS \textwidth = 5.5in)
+# for a full-width figure; default: stacked, column width for a wrapfigure.
+WIDE = "--wide" in sys.argv
+TEXT_WIDTH = 5.5
+
 apply_rcparams()
-fig, (ax_a, ax_b) = plt.subplots(2, 1, figsize=(FIG_WIDTH, 4.6),
-                                 gridspec_kw={"hspace": 0.32})
+if WIDE:
+    # Panel (b) has 3 groups of 7 bars vs. 2 groups of 6 in (a): size the
+    # panels so bars come out the same width in both.
+    fig, (ax_a, ax_b) = plt.subplots(1, 2, figsize=(TEXT_WIDTH, 2.0),
+                                     gridspec_kw={"width_ratios": [2 * 6 + 0.4, 3 * 7 + 0.6],
+                                                  "wspace": 0.12})
+else:
+    fig, (ax_a, ax_b) = plt.subplots(2, 1, figsize=(FIG_WIDTH, 4.6),
+                                     gridspec_kw={"hspace": 0.32})
 fig.patch.set_facecolor("white")
 
 grouped_bars(ax_a, [g[0] for g in MODEL_INDEP], panel_a, ymax=600,
              ylabel="Sum score", percent=False, group_gap=0.4)
-ax_a.set_title("(a) Model-independent (fair comparison)", loc="left", pad=3)
+ax_a.set_title("(a) Model-independent" if WIDE else "(a) Model-independent (fair comparison)",
+               loc="left", pad=3)
 grouped_bars(ax_b, [g[0] for g in ADVERSARIAL], panel_b, ymax=600,
              ylabel="Sum score", percent=False, group_gap=0.3)
 ax_b.set_title("(b) Adversarial perturbations", loc="left", pad=3)
@@ -175,11 +192,19 @@ handles = [
     legend_handle("ConvNeXt-B", white_box=True, label="ConvNeXt-B (white-box)"),
     legend_handle("Oracle", white_box=True, label="Oracle (white-box)"),
 ]
-ax_b.legend(handles=handles, loc="upper center", ncol=2, frameon=False,
-           bbox_to_anchor=(0.5, -0.12), handlelength=1.2, handleheight=0.9,
-           handletextpad=0.4, columnspacing=0.8, labelspacing=0.3)
+legend_kw = dict(frameon=False, handlelength=1.2, handleheight=0.9,
+                 handletextpad=0.4, columnspacing=0.8, labelspacing=0.3)
+if WIDE:
+    ax_b.set_ylabel("")  # shared y-scale; label once on the left panel
+    ax_b.tick_params(labelleft=False)
+    fig.legend(handles=handles, loc="upper center", ncol=4,
+               bbox_to_anchor=(0.5, 0.02), **legend_kw)
+else:
+    ax_b.legend(handles=handles, loc="upper center", ncol=2,
+                bbox_to_anchor=(0.5, -0.12), **legend_kw)
 
+stem = "spider_robust_split_wide" if WIDE else "spider_robust_split"
 for ext in ("png", "pdf"):
-    out = RESULTS_DIR / f"spider_robust_split.{ext}"
+    out = RESULTS_DIR / f"{stem}.{ext}"
     fig.savefig(out, dpi=300, bbox_inches="tight", pad_inches=0.02)
     print(f"Saved -> {out}")
