@@ -123,16 +123,13 @@ def convnext_eval_sum(label):
 # ── Values ───────────────────────────────────────────────────────────────────
 # Each entry: (model name in paper_style.COLORS, values, white_box)
 # Panel (a): clean and common are model-independent, so ConvNeXt-B has one value.
-# ConvNeXt-B is taken from the RobustGenBench evaluation (same images as the
-# Ve-LLMs). NOTE: the Oracle only exists in the FFT-50 study pipeline (fft50.csv),
-# whose common-corruption accuracies differ from the released-image evaluation
-# (ConvNeXt-B: 445.3 in fft50.csv vs 414.9 on the released images).
+# Vision baselines (ConvNeXt-B and Oracle) come from the FFT-50 study (fft50.csv).
 panel_a = [
     ("Gemini 3 Flash", [llm_sum("Gemini Flash (no think)", c) for _, c, _, _ in MODEL_INDEP], False),
     ("GPT-4o mini", [llm_sum("GPT-4o", c) for _, c, _, _ in MODEL_INDEP], False),
     ("Kimi K2.5", [open_sum("kimi", c) for _, c, _, _ in MODEL_INDEP], False),
     ("Qwen3 VL 235B", [open_sum("qwen", c) for _, c, _, _ in MODEL_INDEP], False),
-    ("ConvNeXt-B", [convnext_eval_sum("clean"), convnext_eval_sum("common__common_severity3")], False),
+    ("ConvNeXt-B", [convnext_wb_sum(f) for _, _, f, _ in MODEL_INDEP], False),
     ("Oracle", [oracle_sum(f) for _, _, f, _ in MODEL_INDEP], False),
 ]
 panel_b = [
