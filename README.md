@@ -2,7 +2,7 @@
 
 **Evaluate how image classifiers and vision-enabled LLMs hold up across common corruptions and $\ell_1$, $\ell_2$, $\ell_\infty$ adversarial perturbations, on six downstream datasets.**
 
-[🌐 Project page](https://legolasflagstaff.github.io/robust_training/) · [📦 Dataset on Hugging Face](https://huggingface.co/datasets/legolasflagstaff/RobustGenBench) · [📄 Paper](https://openreview.net/forum?id=KDsuVST8by) · [📜 Citation](#citation)
+[🌐 Project page](https://legolasflagstaff.github.io/robustgenbench/) · [📦 Dataset on Hugging Face](https://huggingface.co/datasets/legolasflagstaff/RobustGenBench) · [📄 Paper](https://openreview.net/forum?id=KDsuVST8by) · [📜 Citation](#citation)
 
 This repository provides the `robustgenbench` Python package, which connects any model to the benchmark in a few lines:
 

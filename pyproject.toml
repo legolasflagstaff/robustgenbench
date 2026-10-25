@@ -30,7 +30,7 @@ robustgenbench = "robustgenbench.cli:main"
 
 [project.urls]
 Dataset = "https://huggingface.co/datasets/legolasflagstaff/RobustGenBench"
-Code = "https://github.com/legolasflagstaff/robust_training"
+Code = "https://github.com/legolasflagstaff/robustgenbench"
 
 [tool.setuptools.packages.find]
 include = ["robustgenbench*"]
