@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RobustGenBench: Robust Generalization to Adversarial and Common Perturbations</title>
+  <meta name="description" content="RobustGenBench is a benchmark for robust generalization of image classifiers and vision-enabled LLMs across common corruptions and l1, l2, l-infinity adversarial perturbations on six downstream datasets. NeurIPS 2026 Evaluations and Datasets Track.">
+  <meta property="og:title" content="RobustGenBench (NeurIPS 2026)">
+  <meta property="og:description" content="A benchmark for robust generalization to adversarial and common perturbations, with applications to vision models and vision-enabled LLMs.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="static/img/perturbations/flowers_linf30.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero">
+  <p class="venue">NeurIPS 2026 · Evaluations &amp; Datasets Track</p>
+  <h1><span class="mono">RobustGenBench</span></h1>
+  <p class="subtitle">A Benchmark for Robust Generalization to Adversarial and Common Perturbations, with Applications to Vision and Vision-Enabled Large Language Models</p>
+
+  <ul class="authors" aria-label="Authors">
+    <li>Maxime Heuillet<sup>1,2</sup></li>
+    <li>Jonas Ngnawé<sup>1,2</sup></li>
+    <li>Yann Pequignot<sup>1</sup></li>
+    <li>Rishika Bhagwatkar<sup>3,2</sup></li>
+    <li>Alexandre Larouche<sup>1,2</sup></li>
+    <li>Christian Gagné<sup>4,1,2</sup></li>
+    <li>Irina Rish<sup>4,3,2</sup></li>
+    <li>Ola Ahmad<sup>5</sup></li>
+    <li>Audrey Durand<sup>4,1,2</sup></li>
+  </ul>
+  <ul class="affiliations" aria-label="Affiliations">
+    <li><sup>1</sup>Université Laval (IID)</li>
+    <li><sup>2</sup>Mila – Québec AI Institute</li>
+    <li><sup>3</sup>Université de Montréal</li>
+    <li><sup>4</sup>Canada CIFAR AI Chair – Mila</li>
+    <li><sup>5</sup>CortAIx Labs, Thales Digital Solutions</li>
+  </ul>
+
+  <nav class="buttons" aria-label="Resources">
+    <a class="btn" href="https://openreview.net/forum?id=KDsuVST8by">📄 Paper</a>
+    <a class="btn" href="https://github.com/legolasflagstaff/robust_training">💻 Code</a>
+    <a class="btn" href="https://huggingface.co/datasets/legolasflagstaff/RobustGenBench">🤗 Dataset</a>
+    <a class="btn" href="#citation">📜 BibTeX</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="teaser" aria-labelledby="teaser-title">
+  <h2 id="teaser-title" class="visually-hidden">Example perturbations</h2>
+  <div class="strip" role="list">
+    <figure role="listitem"><img src="static/img/perturbations/flowers_clean.jpg" alt="Clean image of a flower" width="224" height="224"><figcaption>Clean</figcaption></figure>
+    <figure role="listitem"><img src="static/img/perturbations/flowers_common3.jpg" alt="Same flower with a common corruption" width="224" height="224"><figcaption>Common, severity 3</figcaption></figure>
+    <figure role="listitem"><img src="static/img/perturbations/flowers_l1e300.jpg" alt="Same flower with an l1 adversarial perturbation" width="224" height="224"><figcaption>ℓ<sub>1</sub>, ε = 300</figcaption></figure>
+    <figure role="listitem"><img src="static/img/perturbations/flowers_l2e8.jpg" alt="Same flower with an l2 adversarial perturbation" width="224" height="224"><figcaption>ℓ<sub>2</sub>, ε = 8</figcaption></figure>
+    <figure role="listitem"><img src="static/img/perturbations/flowers_linf30.jpg" alt="Same flower with an l-infinity adversarial perturbation" width="224" height="224"><figcaption>ℓ<sub>∞</sub>, ε = 30/255</figcaption></figure>
+  </div>
+  <p class="tldr"><strong>TL;DR</strong> Models face perturbations they were not trained against. RobustGenBench measures how well robustness <em>generalizes</em> across 23 perturbation types on six downstream datasets, for robustly fine-tuned vision models and vision-enabled LLMs alike, and releases 147k pre-computed adversarial images so any model, even an API, can be evaluated by inference alone.</p>
+</section>
+
+<section aria-labelledby="abstract">
+  <h2 id="abstract">Abstract</h2>
+  <p>Robust generalization in the imaging domain, i.e., how models perform across diverse perturbation settings, is poorly understood for modern classification techniques such as robust fine-tuning from pretrained backbones and zero-shot classification with vision-enabled large language models (Ve-LLMs). We introduce <span class="mono">RobustGenBench</span>, a standardized benchmark of six classification datasets with reproducible evaluation splits and a unified perturbation protocol covering adversarial (ℓ<sub>1</sub>, ℓ<sub>2</sub>, ℓ<sub>∞</sub>) and common perturbations. It releases a corpus of pre-computed adversarial images transferred from open-weight VLM surrogates, enabling black-box robustness evaluation of any model, including API-only systems, without GPU access. Using <span class="mono">RobustGenBench</span>, we conduct one of the most comprehensive studies of robust fine-tuning to date (40 pretrained backbones, 2 robust losses, and 3 adaptation protocols, yielding 7,200 robustness measurements). Convolutional architectures with TRADES perform best at base scale, the advantage of TRADES over Classic AT widens as size grows, and hybrid architectures unlock competitive robust generalization. We further evaluate four Ve-LLMs from four providers: the strongest rivals robustly fine-tuned vision models on clean and common perturbations, and all are least affected by transferred ℓ<sub>1</sub> perturbations, the hardest setting for vision models under white-box attacks. By evaluating both modeling techniques on the same tasks and perturbation settings, <span class="mono">RobustGenBench</span> provides a unifying view of robust generalization.</p>
+</section>
+
+<section aria-labelledby="benchmark">
+  <h2 id="benchmark">The benchmark</h2>
+  <div class="stats" role="list">
+    <div role="listitem"><span class="num">6</span><span class="lbl">downstream datasets</span></div>
+    <div role="listitem"><span class="num">23</span><span class="lbl">perturbation types</span></div>
+    <div role="listitem"><span class="num">147k</span><span class="lbl">released perturbed images</span></div>
+    <div role="listitem"><span class="num">7,200</span><span class="lbl">fine-tuning measurements</span></div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Datasets</h3>
+      <div class="table-wrap">
+      <table>
+        <caption class="visually-hidden">The six RobustGenBench datasets</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">Domain</th><th scope="col">Classes</th><th scope="col">Test</th></tr></thead>
+        <tbody>
+          <tr><td>Caltech-101</td><td>objects, coarse</td><td>101</td><td>1,000</td></tr>
+          <tr><td>FGVC-Aircraft</td><td>aircraft, fine</td><td>100</td><td>1,000</td></tr>
+          <tr><td>Flowers-102</td><td>flowers, fine</td><td>102</td><td>1,000</td></tr>
+          <tr><td>Oxford-IIIT Pet</td><td>pets, fine</td><td>37</td><td>1,000</td></tr>
+          <tr><td>Stanford Cars</td><td>cars, fine</td><td>196</td><td>1,000</td></tr>
+          <tr><td>UC Merced Land Use</td><td>satellite, coarse</td><td>21</td><td>420</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">Fixed splits, 224×224 images, test sets capped at 1,000 images: evaluation cost depends only on the model.</p>
+    </div>
+    <div>
+      <h3>Perturbation settings</h3>
+      <ul class="plain">
+        <li><strong>Common corruptions</strong>: 11 types (noise, blur, weather, digital) at severity 3. Model-independent.</li>
+        <li><strong>Adversarial</strong>: ℓ<sub>1</sub>, ℓ<sub>2</sub>, ℓ<sub>∞</sub>-bounded, full AutoAttack ensemble.
+          <ul>
+            <li><em>Vision models (white-box)</em>: ε<sub>1</sub> = 75, ε<sub>2</sub> = 2, ε<sub>∞</sub> = 4/255.</li>
+            <li><em>Black-box models (transfer)</em>: adds ε<sub>1</sub> = 300, ε<sub>2</sub> = 8, ε<sub>∞</sub> ∈ {8, 30}/255, crafted on 5 open-weight VLM surrogates (CLIP, MetaCLIP, SigLIP2).</li>
+          </ul></li>
+        <li><strong>Metrics</strong>: Sum score (absolute, pool-independent), Borda score (rank consistency), and Mean Absolute Correlation (how uniformly robustness transfers across settings).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="vision">
+  <h2 id="vision">Study 1: robust fine-tuning of vision models</h2>
+  <p>We fine-tune 40 pretrained backbones (19 architectures; convolutional, attention-based, and hybrid; tiny to base size; 6 pre-training protocols) with Classic AT and TRADES under three protocols (full fine-tuning for 50 or 5 epochs, linear probing).</p>
+  <figure class="wide">
+    <img src="static/img/clean_vs_robust_scatter_enhanced_tight.png" alt="Scatter plot of clean versus robust performance for the 80 full fine-tuning configurations, colored by design choice" loading="lazy">
+    <figcaption>Clean vs. robust performance of the 80 configurations fine-tuned for 50 epochs.</figcaption>
+  </figure>
+
+  <h3>Key findings</h3>
+  <ul class="findings">
+    <li><strong>Convolutional + TRADES leads.</strong> ConvNeXt-B (supervised ImageNet-22k) with TRADES is the best configuration overall, with a sum score of 19.79 out of 30: the benchmark is far from saturated.</li>
+    <li><strong>TRADES beats Classic AT, increasingly so at scale.</strong> The advantage holds at every size and widens from tiny to base architectures.</li>
+    <li><strong>Hybrid architectures generalize most uniformly.</strong> They reach the highest MAC, and at tiny size they are the best option.</li>
+    <li><strong>Robust pre-training shines under constrained protocols</strong> (5-epoch fine-tuning, linear probing), but gains little from scaling small to base.</li>
+  </ul>
+
+  <div class="two-col figs">
+    <figure>
+      <img src="static/img/interaction_loss_function_model_size.png" alt="Bar chart of mean Borda score by loss function and architecture size; TRADES outperforms Classic AT with a widening gap at larger sizes" loading="lazy">
+      <figcaption>TRADES vs. Classic AT by architecture size.</figcaption>
+    </figure>
+    <figure>
+      <img src="static/img/interaction_model_size_model_type.png" alt="Bar chart of mean Borda score by architecture type and size; hybrid architectures lead at tiny size" loading="lazy">
+      <figcaption>Architecture type × size.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Top configurations (FFT-50)</h3>
+  <div class="table-wrap">
+  <table>
+    <caption class="visually-hidden">Top FFT-50 configurations by sum score</caption>
+    <thead><tr><th scope="col">#</th><th scope="col">Backbone</th><th scope="col">Type</th><th scope="col">Pre-training</th><th scope="col">Loss</th><th scope="col">Sum score</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="mono">convnext_b,sup,in22k</td><td>convolutional</td><td>supervised</td><td>TRADES</td><td>19.79</td></tr>
+      <tr><td>2</td><td class="mono">convnext_b,clip,laion2b</td><td>convolutional</td><td>multimodal</td><td>TRADES</td><td>19.40</td></tr>
+      <tr><td>3</td><td class="mono">coatnet_2,sup,in12k</td><td>hybrid</td><td>supervised</td><td>TRADES</td><td>18.87</td></tr>
+      <tr><td>4</td><td class="mono">coatnet_2,sup,in12k-in1k</td><td>hybrid</td><td>multistep</td><td>TRADES</td><td>18.74</td></tr>
+      <tr><td>5</td><td class="mono">convnext_b,clip,laiona</td><td>convolutional</td><td>multimodal</td><td>TRADES</td><td>18.24</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Full leaderboards for all three protocols: <code>robustgenbench.reference()</code> in the code release.</p>
+</section>
+
+<section aria-labelledby="vellm">
+  <h2 id="vellm">Study 2: vision-enabled LLMs</h2>
+  <p>We evaluate GPT-4o mini, Gemini 3 Flash, Kimi K2.5, and Qwen3 VL 235B as zero-shot classifiers through their APIs, under transfer attacks from open-weight VLM surrogates.</p>
+
+  <div class="two-col">
+    <div>
+      <div class="table-wrap">
+      <table>
+        <caption class="visually-hidden">Average accuracy of the four Ve-LLMs across the six datasets</caption>
+        <thead><tr><th scope="col">Model</th><th scope="col">Clean</th><th scope="col">Common</th><th scope="col">ℓ<sub>1</sub>@300</th><th scope="col">ℓ<sub>∞</sub>@30/255</th></tr></thead>
+        <tbody>
+          <tr><td>Gemini 3 Flash</td><td>91.8</td><td>78.1</td><td>89.6</td><td>59.8</td></tr>
+          <tr><td>Kimi K2.5</td><td>86.8</td><td>66.4</td><td>81.1</td><td>33.9</td></tr>
+          <tr><td>Qwen3 VL 235B</td><td>76.4</td><td>60.1</td><td>70.5</td><td>32.4</td></tr>
+          <tr><td>GPT-4o mini</td><td>74.6</td><td>60.4</td><td>69.8</td><td>36.4</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">Accuracy (%) averaged over datasets; adversarial columns use the strongest surrogate per dataset.</p>
+      <h3>Key findings</h3>
+      <ul class="findings">
+        <li><strong>Standard budgets barely affect Ve-LLMs.</strong> At ε<sub>∞</sub> = 4/255 drops stay within a few points; higher intensities are needed to stress-test them.</li>
+        <li><strong>ℓ<sub>1</sub> is the least damaging norm</strong> for every Ve-LLM (2–6 points lost at ℓ<sub>1</sub>@300 vs. 32–53 at ℓ<sub>∞</sub>@30/255), while it is the hardest one for vision models under white-box attacks.</li>
+        <li><strong>The best surrogate depends on the target.</strong> SigLIP2 transfers best to Gemini and GPT-4o mini, CLIP ViT-H/14 to Kimi and Qwen.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="static/img/spider_robust_split.png" alt="Bar charts comparing sum scores of Ve-LLMs and fine-tuned vision models on clean and common perturbations, and on adversarial perturbations under transfer and white-box attacks" loading="lazy">
+      <figcaption>Ve-LLMs vs. fine-tuned vision models. Solid: comparable (model-independent or same transfer attack). Hatched: white-box, vision models only.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section aria-labelledby="quickstart">
+  <h2 id="quickstart">Evaluate your model</h2>
+  <p>The <span class="mono">robustgenbench</span> package connects any model to the benchmark and ranks it against the paper's results.</p>
+  <div class="two-col">
+    <div>
+      <h3>A vision-enabled LLM (any OpenAI-compatible API)</h3>
+<pre><code>pip install -e ".[vlm]"
+robustgenbench eval-vlm --model gpt-4o-mini
+robustgenbench leaderboard results.jsonl --compare vellm</code></pre>
+      <h3>Any black-box model</h3>
+<pre><code>import robustgenbench as rgb
+
+class MyModel(rgb.BlackBoxClassifier):
+    def predict(self, image, class_names):
+        return my_model(image, class_names)  # class name or index
+
+results = rgb.evaluate_classifier(MyModel(), "my-model")</code></pre>
+    </div>
+    <div>
+      <h3>A PyTorch classifier (white-box AutoAttack)</h3>
+<pre><code>from robustgenbench.vision import evaluate_model
+
+results = evaluate_model(
+    None, "my-convnext",
+    model_for_dataset=lambda d, _: load_my_model(d))
+print(rgb.leaderboard(results, compare_with="fft50"))</code></pre>
+      <h3>Just the data</h3>
+<pre><code>from datasets import load_dataset
+repo = "legolasflagstaff/RobustGenBench"
+test = load_dataset(repo, "flowers-102", split="test")
+adv  = load_dataset(repo, "flowers-102-clip_vith14",
+                    split="linf_30")</code></pre>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="examples">
+  <h2 id="examples">Perturbations across datasets</h2>
+  <p>The same test image under each perturbation (surrogate: CLIP ViT-H/14).</p>
+  <div class="table-wrap">
+  <table class="grid">
+    <caption class="visually-hidden">Example images for each dataset and perturbation</caption>
+    <thead><tr><th scope="col">Setting</th><th scope="col">Caltech-101</th><th scope="col">Aircraft</th><th scope="col">Flowers</th><th scope="col">Pet</th><th scope="col">Cars</th><th scope="col">UC Merced</th></tr></thead>
+    <tbody id="grid-body"></tbody>
+  </table>
+  </div>
+</section>
+
+<section aria-labelledby="citation">
+  <h2 id="citation">Citation</h2>
+  <div class="bibtex">
+    <button type="button" class="copy" data-target="bib">Copy</button>
+<pre id="bib"><code>@inproceedings{heuillet2026robustgenbench,
+  title     = {RobustGenBench: A Benchmark for Robust Generalization to Adversarial and Common Perturbations, with Applications to Vision and Vision-Enabled Large Language Models},
+  author    = {Heuillet, Maxime and Ngnaw{\'e}, Jonas and Pequignot, Yann and Bhagwatkar, Rishika and Larouche, Alexandre and Gagn{\'e}, Christian and Rish, Irina and Ahmad, Ola and Durand, Audrey},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems Evaluations and Datasets Track},
+  url       = {https://openreview.net/forum?id=KDsuVST8by},
+  year      = {2026}
+}</code></pre>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Data and code released under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>; images also follow the terms of their source datasets.</p>
+</footer>
+
+<script src="static/js/main.js"></script>
+</body>
+</html>
