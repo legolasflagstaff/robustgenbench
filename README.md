@@ -106,8 +106,6 @@ Metrics (`robustgenbench.metrics`):
 
 `rgb.reference("vision_whitebox", protocol="fft50" | "fft5" | "lp50")` and `rgb.reference("vellm_transfer")` return the paper's per-(dataset, setting) accuracies. The test suite checks that they reproduce the paper's leaderboard (top Sum score 19.79, Borda 2281, Kendall's τ = 0.854 between Borda and Sum, MAC 0.795).
 
-The Ve-LLM reference results for the `common` setting were obtained on the common-corruption images of dataset v2.0; all other reference results correspond to the current release.
-
 ## Data access
 
 ```python
