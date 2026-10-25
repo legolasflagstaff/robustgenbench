@@ -2,7 +2,7 @@
 
 **Evaluate how image classifiers and vision-enabled LLMs hold up across common corruptions and $\ell_1$, $\ell_2$, $\ell_\infty$ adversarial perturbations, on six downstream datasets.**
 
-[📦 Dataset on Hugging Face](https://huggingface.co/datasets/legolasflagstaff/RobustGenBench) · 📄 Paper · [📜 Citation](#citation)
+[📦 Dataset on Hugging Face](https://huggingface.co/datasets/legolasflagstaff/RobustGenBench) · [📄 Paper](https://openreview.net/forum?id=KDsuVST8by) · [📜 Citation](#citation)
 
 This repository provides the `robustgenbench` Python package, which connects any model to the benchmark in a few lines:
 
@@ -146,7 +146,8 @@ Code: [CC BY-NC 4.0](LICENSE), the same license as the dataset, for non-commerci
 @inproceedings{heuillet2026robustgenbench,
   title     = {RobustGenBench: A Benchmark for Robust Generalization to Adversarial and Common Perturbations, with Applications to Vision and Vision-Enabled Large Language Models},
   author    = {Heuillet, Maxime and Ngnaw{\'e}, Jonas and Pequignot, Yann and Bhagwatkar, Rishika and Larouche, Alexandre and Gagn{\'e}, Christian and Rish, Irina and Ahmad, Ola and Durand, Audrey},
-  booktitle = {TODO},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems Evaluations and Datasets Track},
+  url       = {https://openreview.net/forum?id=KDsuVST8by},
   year      = {2026}
 }
 ```
