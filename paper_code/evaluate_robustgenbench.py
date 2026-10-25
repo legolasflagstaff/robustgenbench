@@ -213,7 +213,7 @@ class RobustGenBenchDataset(Dataset):
     def __getitem__(self, idx):
         img_path, label = self.items[idx]
         img = Image.open(img_path).convert("RGB")
-        return self.transform(img), label
+        return self.transform(img), label, idx
 
 
 def build_transform():
@@ -242,9 +242,11 @@ def load_trained_model(args, N: int, rank: int):
         raise FileNotFoundError(f"HPO config not found at {config_path}")
     config = OmegaConf.load(config_path)
 
-    # Copy backbone .pt to work_path so load_architecture can find it
+    # Copy backbone .pt to work_path/SLURM_JOB_ID so load_architecture can find
+    # it (must match the job-scoped statedict_dir it reads from — see
+    # architectures/loaders.py — to avoid concurrent-job path collisions).
     backbone_src = Path(os.path.expanduser("~/links/scratch/mheuill/my_backbones")) / f"{config.backbone}.pt"
-    backbone_dst = Path(os.path.expandvars(config.work_path)).expanduser().resolve()
+    backbone_dst = Path(os.path.expandvars(config.work_path)).expanduser().resolve() / os.environ.get("SLURM_JOB_ID", "local")
     backbone_dst.mkdir(parents=True, exist_ok=True)
     if backbone_src.exists():
         shutil.copy2(str(backbone_src), str(backbone_dst))
@@ -254,7 +256,12 @@ def load_trained_model(args, N: int, rank: int):
     model = load_architecture(config, N)
     model = CustomModel(config, model)
 
-    # Load trained weights — saved with single _ separator
+    # Load trained weights. distributed_experiment_final.py's training() saves
+    # to f"{config.exp_id}.pt" where config is config_optimal (loaded fresh from
+    # the HPO yaml) — only config_optimal.project_name gets overridden there,
+    # never .exp_id, so the filename actually used is the yaml's OWN stored
+    # exp_id field (single "_" separator, stale from HPO-save time), NOT
+    # args.exp_id (double "__", only used to locate the yaml file itself).
     state_dict_filename = f"{args.backbone}_{args.dataset}_{args.loss}.pt"
     state_dict_path = Path(os.path.expanduser(args.trained_statedicts_path)) / args.project / state_dict_filename
     if not state_dict_path.exists():
@@ -274,7 +281,10 @@ def load_trained_model(args, N: int, rank: int):
 
 def inference_worker(rank, world_size, items, args, result_queue, N):
     os.environ["MASTER_ADDR"] = "localhost"
-    os.environ["MASTER_PORT"] = os.environ.get("MASTER_PORT", "29500")
+    # Derived from SLURM_JOB_ID rather than a fixed default: concurrent eval
+    # jobs on the same node would otherwise all rendezvous on the same port.
+    job_id = os.environ.get("SLURM_JOB_ID", "0")
+    os.environ["MASTER_PORT"] = os.environ.get("MASTER_PORT", str(20000 + (int(job_id) % 20000)))
     dist.init_process_group("nccl", rank=rank, world_size=world_size)
 
     model = load_trained_model(args, N, rank)
@@ -290,35 +300,61 @@ def inference_worker(rank, world_size, items, args, result_queue, N):
 
     nb_correct  = 0
     nb_examples = 0
+    records     = []  # (idx, true_label, pred_label), only populated if args.save_predictions
 
     with torch.no_grad():
-        for images, labels in loader:
+        for images, labels, idxs in loader:
             images = images.to(rank)
             labels = labels.to(rank)
             logits_nat, _ = model(images, images)
             preds = logits_nat.argmax(dim=1)
             nb_correct  += (preds == labels).sum().item()
             nb_examples += labels.size(0)
+            if args.save_predictions:
+                records.extend(zip(idxs.tolist(), labels.tolist(), preds.tolist()))
 
-    result_queue.put((rank, nb_correct, nb_examples))
+    result_queue.put((rank, nb_correct, nb_examples, records))
     dist.barrier()
     dist.destroy_process_group()
 
 
-def run_distributed_inference(items, args, N) -> dict:
+def run_distributed_inference(items, args, N):
     world_size   = torch.cuda.device_count()
     result_queue = mp.Queue()
     mp.spawn(inference_worker, args=(world_size, items, args, result_queue, N),
              nprocs=world_size, join=True)
     total_correct  = 0
     total_examples = 0
+    # DistributedSampler(drop_last=False) pads the last shard by repeating a few
+    # leading indices across ranks; dedupe by idx so per-observation predictions
+    # contain exactly one row per dataset item (required for valid bootstrapping).
+    by_idx = {}
     while not result_queue.empty():
-        rank, nb_correct, nb_examples = result_queue.get()
+        rank, nb_correct, nb_examples, records = result_queue.get()
         total_correct  += nb_correct
         total_examples += nb_examples
+        for idx, true_label, pred_label in records:
+            by_idx[idx] = (true_label, pred_label)
     accuracy = total_correct / total_examples if total_examples > 0 else 0.0
-    return {"nb_correct": total_correct, "nb_examples": total_examples,
-            "accuracy": round(accuracy, 4)}
+    stats = {"nb_correct": total_correct, "nb_examples": total_examples,
+             "accuracy": round(accuracy, 4)}
+    predictions = (sorted((idx, tl, pl) for idx, (tl, pl) in by_idx.items())
+                   if args.save_predictions else None)
+    return stats, predictions
+
+
+def write_predictions_csv(records, items, results_dir: Path, exp_id: str, label: str):
+    preds_dir = results_dir / "predictions"
+    preds_dir.mkdir(parents=True, exist_ok=True)
+    out_path = preds_dir / f"{exp_id}__{label}__predictions.csv"
+    with open(out_path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["idx", "filename", "true_label", "pred_label", "correct"])
+        for idx, true_label, pred_label in records:
+            filename = items[idx][0].name
+            writer.writerow([idx, filename, true_label, pred_label,
+                              int(true_label == pred_label)])
+    print(f"  Predictions saved to: {out_path} ({len(records)} rows)")
 
 
 # ---------------------------------------------------------------------------
@@ -333,12 +369,14 @@ def main():
     parser.add_argument("--seed",                 type=int, default=1)
     parser.add_argument("--project",              required=True)
     parser.add_argument("--hpo_source_project",   default=None)
-    parser.add_argument("--batch_size",           type=int, default=64)
+    parser.add_argument("--batch_size",           type=int, default=256)
+    parser.add_argument("--save_predictions",     action="store_true",
+                        help="Also save per-observation predictions CSV for bootstrap analysis.")
     parser.add_argument("--configs_path",
                         default=os.environ.get("CONFIGS_PATH", "./configs"))
     parser.add_argument("--trained_statedicts_path",
                         default=os.environ.get("TRAINED_STATEDICTS_PATH",
-                                               "~/scratch/trained_state_dicts"))
+                                               "~/links/scratch/mheuill/robust_training/trained_statedicts"))
     parser.add_argument("--results_path",
                         default=os.environ.get("ROBUSTGENBENCH_RESULTS_PATH",
                                                "./robustgenbench_eval"))
@@ -410,7 +448,7 @@ def main():
         # Pixel sanity check
         arr = np.array(Image.open(clean_items[0][0]).convert("RGB")) / 255.0
         print(f"  Clean img[0]: min={arr.min():.3f} max={arr.max():.3f} mean={arr.mean():.3f}")
-        stats = run_distributed_inference(clean_items, args, N)
+        stats, preds = run_distributed_inference(clean_items, args, N)
         print(f"  Clean accuracy: {stats['nb_correct']}/{stats['nb_examples']} = {stats['accuracy']:.4f}")
         writer.writerow({"dataset": args.dataset, "project": args.project,
                          "backbone": args.backbone, "loss": args.loss,
@@ -418,6 +456,8 @@ def main():
                          "label": "clean", "nb_correct": stats["nb_correct"],
                          "nb_examples": stats["nb_examples"], "accuracy": stats["accuracy"]})
         csv_file.flush()
+        if args.save_predictions and preds:
+            write_predictions_csv(preds, clean_items, results_dir, args.exp_id, "clean")
 
     # --- Adversarial evaluations ---
     for job in build_eval_matrix():
@@ -446,7 +486,7 @@ def main():
         arr = np.array(Image.open(items[0][0]).convert("RGB")) / 255.0
         print(f"  Adv img[0]: min={arr.min():.3f} max={arr.max():.3f} mean={arr.mean():.3f}")
 
-        stats = run_distributed_inference(items, args, N)
+        stats, preds = run_distributed_inference(items, args, N)
         print(f"  Result: {stats['nb_correct']}/{stats['nb_examples']} = {stats['accuracy']:.4f}")
 
         writer.writerow({"dataset": args.dataset, "project": args.project,
@@ -455,6 +495,8 @@ def main():
                          "label": job["label"], "nb_correct": stats["nb_correct"],
                          "nb_examples": stats["nb_examples"], "accuracy": stats["accuracy"]})
         csv_file.flush()
+        if args.save_predictions and preds:
+            write_predictions_csv(preds, items, results_dir, args.exp_id, job["label"])
 
     csv_file.close()
     print(f"\nAll done. Results saved to: {csv_path}")
