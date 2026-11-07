@@ -142,7 +142,7 @@ Code: [CC BY-NC 4.0](LICENSE), the same license as the dataset, for non-commerci
 
 ```bibtex
 @inproceedings{heuillet2026robustgenbench,
-  title     = {RobustGenBench: A Benchmark for Robust Generalization to Adversarial and Common Perturbations, with Applications to Vision and Vision-Enabled Large Language Models},
+  title     = {RobustGenBench: Benchmarking Robust Generalization to Unforeseen Adversarial and Common Perturbations in Vision Models and Vision-Enabled LLMs},
   author    = {Heuillet, Maxime and Ngnaw{\'e}, Jonas and Pequignot, Yann and Bhagwatkar, Rishika and Larouche, Alexandre and Gagn{\'e}, Christian and Rish, Irina and Ahmad, Ola and Durand, Audrey},
   booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems Evaluations and Datasets Track},
   url       = {https://openreview.net/forum?id=KDsuVST8by},
