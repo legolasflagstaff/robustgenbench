@@ -1,0 +1,6345 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "arrayShape": "cr:arrayShape",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "containedIn": "cr:containedIn",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataBiases": "cr:dataBiases",
+    "dataCollection": "cr:dataCollection",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isArray": "cr:isArray",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "personalSensitiveInformation": "cr:personalSensitiveInformation",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "name": "RobustGenBench",
+  "description": "RobustGenBench is a standardized benchmark for robust generalization of image classifiers: how accuracy holds up across perturbation types a model was not trained against. It packages six classification datasets (Caltech-101, FGVC-Aircraft, Flowers-102, Oxford-IIIT Pet, Stanford Cars, UC Merced Land Use) with fixed train/validation/test splits, images resized to 224x224, and test sets capped at 1,000 images (420 for UC Merced; 5,420 test images in total). Each dataset config holds the clean splits, a common-corruption split (11 corruption types at severity 3, assigned deterministically, one per image) and a random uniform-noise control (l-infinity, 30/255). Each <dataset>-<surrogate> config holds adversarial test images crafted with AutoAttack on an open-weight vision-language surrogate (CLIP ViT-B/16, CLIP ViT-H/14, MetaCLIP ViT-H/14, SigLIP2 SO400M, SigLIP2 base) at l1 in {75, 300}, l2 in {2, 8} and l-infinity in {4, 8, 30}/255. Because these perturbations transfer, any model, including API-only vision-enabled LLMs, can be evaluated by inference alone. Companion code: https://github.com/legolasflagstaff/robustgenbench",
+  "alternateName": [
+    "legolasflagstaff/RobustGenBench",
+    "RobustGenBench"
+  ],
+  "version": "2.1.0",
+  "datePublished": "2026-04-28",
+  "dateModified": "2026-10-24",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "url": "https://huggingface.co/datasets/legolasflagstaff/RobustGenBench",
+  "sameAs": [
+    "https://github.com/legolasflagstaff/robustgenbench",
+    "https://legolasflagstaff.github.io/robustgenbench/"
+  ],
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Maxime Heuillet"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Jonas Ngnawé"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Yann Pequignot"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Rishika Bhagwatkar"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Alexandre Larouche"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Christian Gagné"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Irina Rish"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Ola Ahmad"
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Audrey Durand"
+    }
+  ],
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Hugging Face",
+    "url": "https://huggingface.co"
+  },
+  "citeAs": "@inproceedings{heuillet2026robustgenbench,\n  title     = {RobustGenBench: Benchmarking Robust Generalization to Unforeseen Adversarial and Common Perturbations in Vision Models and Vision-Enabled LLMs},\n  author    = {Heuillet, Maxime and Ngnaw{\\'e}, Jonas and Pequignot, Yann and Bhagwatkar, Rishika and Larouche, Alexandre and Gagn{\\'e}, Christian and Rish, Irina and Ahmad, Ola and Durand, Audrey},\n  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems Evaluations and Datasets Track},\n  url       = {https://openreview.net/forum?id=KDsuVST8by},\n  year      = {2026}\n}",
+  "citation": "RobustGenBench: Benchmarking Robust Generalization to Unforeseen Adversarial and Common Perturbations in Vision Models and Vision-Enabled LLMs",
+  "isLiveDataset": false,
+  "keywords": [
+    "robust generalization",
+    "unforeseen robustness",
+    "adversarial robustness",
+    "common corruptions",
+    "transfer attacks",
+    "AutoAttack",
+    "image classification",
+    "vision-enabled large language models",
+    "benchmark"
+  ],
+  "rai:dataCollection": "No new images were collected. The clean images come from six public datasets, organized into fixed train/validation/test splits, resized to 224x224 and stored as lossless PNG. Test sets were reduced to at most 1,000 images by uniform sampling that preserves all classes.",
+  "rai:dataLimitations": [
+    "Coverage is bounded by the six source datasets (objects, aircraft, flowers, pets, cars, aerial land use). Robustness measured here should not be read as robustness on open-world imagery or other domains.",
+    "Adversarial images are crafted white-box on five fixed open-weight surrogates, all attention-based, and act as transfer (black-box) attacks for any other model. For a model with gradient access, they are not a substitute for white-box or adaptive evaluation, which the companion code runs on the clean test splits (as done for the fine-tuned vision models in the paper). Transfer is also weaker to architectures unlike the surrogates (e.g., convolutional networks).",
+    "Surrogates only attack images they classify correctly; images the surrogate misclassifies are stored unmodified (is_modified = false). SigLIP2 SO400M adversarial splits exist only for the coarse-grained datasets (Caltech-101, Flowers-102, UC Merced), and SigLIP2 base only at l-infinity 30/255.",
+    "Common corruptions are provided at a single severity (3); adversarial perturbations are provided at several budgets per norm (l1 75/300, l2 2/8, l-infinity 4/8/30 /255). Budgets are not matched across norms, so cross-norm comparisons depend on the chosen intensities.",
+    "Images are 224x224; results may not transfer to models evaluated at other resolutions without resizing."
+  ],
+  "rai:dataBiases": [
+    "The source datasets reflect the content and collection choices of their original authors (e.g., car models from a narrow period, pet breeds common in the UK, web-scraped Caltech-101 imagery with known class imbalance). These selection biases carry over to every robustness score.",
+    "Transfer-attack strength varies by dataset and class with the surrogate's own zero-shot accuracy (e.g., weak SigLIP2 accuracy on fine-grained datasets), so per-class and per-dataset robustness signals are uneven."
+  ],
+  "rai:personalSensitiveInformation": "The dataset contains no annotated personal or sensitive attributes. Some source images may incidentally show people, faces or license plates (e.g., Caltech-101, Stanford Cars, Oxford-IIIT Pet). No anonymization beyond the source datasets was applied.",
+  "rai:dataUseCases": [
+    "Intended: held-out evaluation of how image classifiers (fine-tuned vision models, zero-shot models, API-only vision-enabled LLMs) generalize across common and l1/l2/l-infinity perturbations, using the protocol and metrics (Sum, Borda, MAC) of the associated paper.",
+    "Intended: crafting new perturbations on the clean test splits for white-box evaluation, and robust fine-tuning on the clean train/validation splits.",
+    "Not validated for: training general-purpose recognition models, fairness or demographic auditing, or robustness claims outside the six domains and the included budgets."
+  ],
+  "rai:dataSocialImpact": "The benchmark aims to make robustness comparisons reproducible and cheap: the pre-computed attacks remove the need for high-memory GPUs, so models can be tested before deployment. The released adversarial images could also be used to probe deployed systems; they are standard l-p transfer attacks on public datasets, the release is limited to non-commercial research use (CC BY-NC 4.0, plus the source datasets' terms), and the domains covered are narrow.",
+  "rai:hasSyntheticData": true,
+  "rai:hasSyntheticDataDescription": "Common-corruption, random-noise and adversarial splits are procedurally perturbed versions of the natural source images (imgaug corruptions, uniform l-infinity noise, AutoAttack). No images were produced by generative models.",
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://data.caltech.edu/records/mzrjq-6wc02",
+      "name": "Caltech-101"
+    },
+    {
+      "@id": "https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/",
+      "name": "FGVC-Aircraft"
+    },
+    {
+      "@id": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+      "name": "Oxford 102 Flowers"
+    },
+    {
+      "@id": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+      "name": "Oxford-IIIT Pet"
+    },
+    {
+      "@id": "https://ai.stanford.edu/~jkrause/cars/car_dataset.html",
+      "name": "Stanford Cars"
+    },
+    {
+      "@id": "http://weegee.vision.ucmerced.edu/datasets/landuse.html",
+      "name": "UC Merced Land Use"
+    }
+  ],
+  "prov:wasGeneratedBy": "(1) Source datasets were downloaded from their official pages and organized into fixed train/validation/test splits; test sets were capped at 1,000 images with class-preserving uniform sampling. (2) Original images were resized from their native resolutions to a common 224x224 and stored as lossless PNG. (3) Common corruptions: 11 ImageNet-C-style corruption types (imgaug) at severity 3, assigned to test images in contiguous blocks (type floor(i/s) mod 11, s = floor(N/11)), one corruption per image. (4) Random control: uniform noise in the l-infinity ball of radius 30/255, clipped to [0, 1]. (5) Adversarial: white-box AutoAttack (standard version) against zero-shot classifiers built from each surrogate ('a photo of a {class}' text prompts), released for use as transfer attacks on other models, at l1 75/300, l2 2/8, l-infinity 4/8/30 (/255), in the 224x224 input space (SigLIP2 SO400M upsamples to 384 inside its forward pass). (6) All splits are stored as Parquet. Version 2.1 restores the common split of the original processed archives (tag v1.0-archives). Code: https://github.com/legolasflagstaff/robustgenbench",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "repo",
+      "name": "repo",
+      "description": "The Hugging Face git repository.",
+      "contentUrl": "https://huggingface.co/datasets/legolasflagstaff/RobustGenBench/tree/refs%2Fconvert%2Fparquet",
+      "encodingFormat": "git+https",
+      "sha256": "https://github.com/mlcommons/croissant/issues/80"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-caltech101",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "caltech101/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-caltech101-clip_vitb16",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "caltech101-clip_vitb16/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-caltech101-clip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "caltech101-clip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-caltech101-metaclip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "caltech101-metaclip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-caltech101-siglip2_base",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "caltech101-siglip2_base/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-caltech101-siglip2_so400m",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "caltech101-siglip2_so400m/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-fgvc-aircraft-2013b",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "fgvc-aircraft-2013b/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "fgvc-aircraft-2013b-clip_vitb16/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "fgvc-aircraft-2013b-clip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "fgvc-aircraft-2013b-metaclip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "fgvc-aircraft-2013b-siglip2_base/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-flowers-102",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "flowers-102/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-flowers-102-clip_vitb16",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "flowers-102-clip_vitb16/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-flowers-102-clip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "flowers-102-clip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-flowers-102-metaclip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "flowers-102-metaclip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-flowers-102-siglip2_base",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "flowers-102-siglip2_base/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-flowers-102-siglip2_so400m",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "flowers-102-siglip2_so400m/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-oxford-iiit-pet",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "oxford-iiit-pet/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "oxford-iiit-pet-clip_vitb16/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "oxford-iiit-pet-clip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "oxford-iiit-pet-metaclip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "oxford-iiit-pet-siglip2_base/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-stanford_cars",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "stanford_cars/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-stanford_cars-clip_vitb16",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "stanford_cars-clip_vitb16/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-stanford_cars-clip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "stanford_cars-clip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-stanford_cars-siglip2_base",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "stanford_cars-siglip2_base/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-uc-merced-land-use-dataset",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "uc-merced-land-use-dataset/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "uc-merced-land-use-dataset-clip_vitb16/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "uc-merced-land-use-dataset-clip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "uc-merced-land-use-dataset-metaclip_vith14/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "uc-merced-land-use-dataset-siglip2_base/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "uc-merced-land-use-dataset-siglip2_so400m/*/*.parquet"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "caltech101_splits/split_name"
+      },
+      "@id": "caltech101_splits",
+      "name": "caltech101_splits",
+      "description": "Splits for the caltech101 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "caltech101_splits/split_name": "train"
+        },
+        {
+          "caltech101_splits/split_name": "validation"
+        },
+        {
+          "caltech101_splits/split_name": "test"
+        },
+        {
+          "caltech101_splits/split_name": "common"
+        },
+        {
+          "caltech101_splits/split_name": "random_linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "caltech101",
+      "description": "legolasflagstaff/RobustGenBench - 'caltech101' subset\n\nAdditional information:\n- 5 splits: train, validation, test, common, random_linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "caltech101/(?:partial-)?(train|validation|test|common|random_linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "caltech101_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "caltech101-clip_vitb16_splits/split_name"
+      },
+      "@id": "caltech101-clip_vitb16_splits",
+      "name": "caltech101-clip_vitb16_splits",
+      "description": "Splits for the caltech101-clip_vitb16 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "caltech101-clip_vitb16_splits/split_name": "l1_75"
+        },
+        {
+          "caltech101-clip_vitb16_splits/split_name": "l1_300"
+        },
+        {
+          "caltech101-clip_vitb16_splits/split_name": "l2_2"
+        },
+        {
+          "caltech101-clip_vitb16_splits/split_name": "l2_8"
+        },
+        {
+          "caltech101-clip_vitb16_splits/split_name": "linf_4"
+        },
+        {
+          "caltech101-clip_vitb16_splits/split_name": "linf_8"
+        },
+        {
+          "caltech101-clip_vitb16_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "caltech101-clip_vitb16",
+      "description": "legolasflagstaff/RobustGenBench - 'caltech101-clip_vitb16' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "caltech101\\-clip_vitb16/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "caltech101-clip_vitb16_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vitb16/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vitb16"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "caltech101-clip_vith14_splits/split_name"
+      },
+      "@id": "caltech101-clip_vith14_splits",
+      "name": "caltech101-clip_vith14_splits",
+      "description": "Splits for the caltech101-clip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "caltech101-clip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "caltech101-clip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "caltech101-clip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "caltech101-clip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "caltech101-clip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "caltech101-clip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "caltech101-clip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "caltech101-clip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'caltech101-clip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "caltech101\\-clip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "caltech101-clip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-clip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-clip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "caltech101-metaclip_vith14_splits/split_name"
+      },
+      "@id": "caltech101-metaclip_vith14_splits",
+      "name": "caltech101-metaclip_vith14_splits",
+      "description": "Splits for the caltech101-metaclip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "caltech101-metaclip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "caltech101-metaclip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'caltech101-metaclip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "caltech101\\-metaclip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "caltech101-metaclip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-metaclip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-metaclip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "caltech101-siglip2_base_splits/split_name"
+      },
+      "@id": "caltech101-siglip2_base_splits",
+      "name": "caltech101-siglip2_base_splits",
+      "description": "Splits for the caltech101-siglip2_base config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "caltech101-siglip2_base_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "caltech101-siglip2_base",
+      "description": "legolasflagstaff/RobustGenBench - 'caltech101-siglip2_base' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "caltech101\\-siglip2_base/(?:partial-)?(linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "caltech101-siglip2_base_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_base/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_base"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "caltech101-siglip2_so400m_splits/split_name"
+      },
+      "@id": "caltech101-siglip2_so400m_splits",
+      "name": "caltech101-siglip2_so400m_splits",
+      "description": "Splits for the caltech101-siglip2_so400m config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "l1_75"
+        },
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "l1_300"
+        },
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "l2_2"
+        },
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "l2_8"
+        },
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "linf_4"
+        },
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "linf_8"
+        },
+        {
+          "caltech101-siglip2_so400m_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "caltech101-siglip2_so400m",
+      "description": "legolasflagstaff/RobustGenBench - 'caltech101-siglip2_so400m' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "caltech101\\-siglip2_so400m/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "caltech101-siglip2_so400m_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "caltech101-siglip2_so400m/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-caltech101-siglip2_so400m"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "fgvc-aircraft-2013b_splits/split_name"
+      },
+      "@id": "fgvc-aircraft-2013b_splits",
+      "name": "fgvc-aircraft-2013b_splits",
+      "description": "Splits for the fgvc-aircraft-2013b config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "fgvc-aircraft-2013b_splits/split_name": "train"
+        },
+        {
+          "fgvc-aircraft-2013b_splits/split_name": "validation"
+        },
+        {
+          "fgvc-aircraft-2013b_splits/split_name": "test"
+        },
+        {
+          "fgvc-aircraft-2013b_splits/split_name": "common"
+        },
+        {
+          "fgvc-aircraft-2013b_splits/split_name": "random_linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "fgvc-aircraft-2013b",
+      "description": "legolasflagstaff/RobustGenBench - 'fgvc-aircraft-2013b' subset\n\nAdditional information:\n- 5 splits: train, validation, test, common, random_linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "fgvc\\-aircraft\\-2013b/(?:partial-)?(train|validation|test|common|random_linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "fgvc-aircraft-2013b_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "fgvc-aircraft-2013b-clip_vitb16_splits/split_name"
+      },
+      "@id": "fgvc-aircraft-2013b-clip_vitb16_splits",
+      "name": "fgvc-aircraft-2013b-clip_vitb16_splits",
+      "description": "Splits for the fgvc-aircraft-2013b-clip_vitb16 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "l1_75"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "l1_300"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "l2_2"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "l2_8"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "linf_4"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "linf_8"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vitb16_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "fgvc-aircraft-2013b-clip_vitb16",
+      "description": "legolasflagstaff/RobustGenBench - 'fgvc-aircraft-2013b-clip_vitb16' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "fgvc\\-aircraft\\-2013b\\-clip_vitb16/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "fgvc-aircraft-2013b-clip_vitb16_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vitb16/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vitb16"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "fgvc-aircraft-2013b-clip_vith14_splits/split_name"
+      },
+      "@id": "fgvc-aircraft-2013b-clip_vith14_splits",
+      "name": "fgvc-aircraft-2013b-clip_vith14_splits",
+      "description": "Splits for the fgvc-aircraft-2013b-clip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "fgvc-aircraft-2013b-clip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "fgvc-aircraft-2013b-clip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'fgvc-aircraft-2013b-clip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "fgvc\\-aircraft\\-2013b\\-clip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "fgvc-aircraft-2013b-clip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-clip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-clip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name"
+      },
+      "@id": "fgvc-aircraft-2013b-metaclip_vith14_splits",
+      "name": "fgvc-aircraft-2013b-metaclip_vith14_splits",
+      "description": "Splits for the fgvc-aircraft-2013b-metaclip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "fgvc-aircraft-2013b-metaclip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'fgvc-aircraft-2013b-metaclip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "fgvc\\-aircraft\\-2013b\\-metaclip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "fgvc-aircraft-2013b-metaclip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-metaclip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-metaclip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "fgvc-aircraft-2013b-siglip2_base_splits/split_name"
+      },
+      "@id": "fgvc-aircraft-2013b-siglip2_base_splits",
+      "name": "fgvc-aircraft-2013b-siglip2_base_splits",
+      "description": "Splits for the fgvc-aircraft-2013b-siglip2_base config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "fgvc-aircraft-2013b-siglip2_base_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "fgvc-aircraft-2013b-siglip2_base",
+      "description": "legolasflagstaff/RobustGenBench - 'fgvc-aircraft-2013b-siglip2_base' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "fgvc\\-aircraft\\-2013b\\-siglip2_base/(?:partial-)?(linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "fgvc-aircraft-2013b-siglip2_base_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fgvc-aircraft-2013b-siglip2_base/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-fgvc-aircraft-2013b-siglip2_base"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "flowers-102_splits/split_name"
+      },
+      "@id": "flowers-102_splits",
+      "name": "flowers-102_splits",
+      "description": "Splits for the flowers-102 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "flowers-102_splits/split_name": "train"
+        },
+        {
+          "flowers-102_splits/split_name": "validation"
+        },
+        {
+          "flowers-102_splits/split_name": "test"
+        },
+        {
+          "flowers-102_splits/split_name": "common"
+        },
+        {
+          "flowers-102_splits/split_name": "random_linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "flowers-102",
+      "description": "legolasflagstaff/RobustGenBench - 'flowers-102' subset\n\nAdditional information:\n- 5 splits: train, validation, test, common, random_linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "flowers\\-102/(?:partial-)?(train|validation|test|common|random_linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "flowers-102_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "flowers-102-clip_vitb16_splits/split_name"
+      },
+      "@id": "flowers-102-clip_vitb16_splits",
+      "name": "flowers-102-clip_vitb16_splits",
+      "description": "Splits for the flowers-102-clip_vitb16 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "l1_75"
+        },
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "l1_300"
+        },
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "l2_2"
+        },
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "l2_8"
+        },
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "linf_4"
+        },
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "linf_8"
+        },
+        {
+          "flowers-102-clip_vitb16_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "flowers-102-clip_vitb16",
+      "description": "legolasflagstaff/RobustGenBench - 'flowers-102-clip_vitb16' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "flowers\\-102\\-clip_vitb16/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "flowers-102-clip_vitb16_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vitb16/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vitb16"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "flowers-102-clip_vith14_splits/split_name"
+      },
+      "@id": "flowers-102-clip_vith14_splits",
+      "name": "flowers-102-clip_vith14_splits",
+      "description": "Splits for the flowers-102-clip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "flowers-102-clip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "flowers-102-clip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "flowers-102-clip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "flowers-102-clip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "flowers-102-clip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "flowers-102-clip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "flowers-102-clip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "flowers-102-clip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'flowers-102-clip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "flowers\\-102\\-clip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "flowers-102-clip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-clip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-clip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "flowers-102-metaclip_vith14_splits/split_name"
+      },
+      "@id": "flowers-102-metaclip_vith14_splits",
+      "name": "flowers-102-metaclip_vith14_splits",
+      "description": "Splits for the flowers-102-metaclip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "flowers-102-metaclip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "flowers-102-metaclip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'flowers-102-metaclip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "flowers\\-102\\-metaclip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "flowers-102-metaclip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-metaclip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-metaclip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "flowers-102-siglip2_base_splits/split_name"
+      },
+      "@id": "flowers-102-siglip2_base_splits",
+      "name": "flowers-102-siglip2_base_splits",
+      "description": "Splits for the flowers-102-siglip2_base config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "flowers-102-siglip2_base_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "flowers-102-siglip2_base",
+      "description": "legolasflagstaff/RobustGenBench - 'flowers-102-siglip2_base' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "flowers\\-102\\-siglip2_base/(?:partial-)?(linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "flowers-102-siglip2_base_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_base/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_base"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "flowers-102-siglip2_so400m_splits/split_name"
+      },
+      "@id": "flowers-102-siglip2_so400m_splits",
+      "name": "flowers-102-siglip2_so400m_splits",
+      "description": "Splits for the flowers-102-siglip2_so400m config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "l1_75"
+        },
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "l1_300"
+        },
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "l2_2"
+        },
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "l2_8"
+        },
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "linf_4"
+        },
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "linf_8"
+        },
+        {
+          "flowers-102-siglip2_so400m_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "flowers-102-siglip2_so400m",
+      "description": "legolasflagstaff/RobustGenBench - 'flowers-102-siglip2_so400m' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "flowers\\-102\\-siglip2_so400m/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "flowers-102-siglip2_so400m_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "flowers-102-siglip2_so400m/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-flowers-102-siglip2_so400m"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "oxford-iiit-pet_splits/split_name"
+      },
+      "@id": "oxford-iiit-pet_splits",
+      "name": "oxford-iiit-pet_splits",
+      "description": "Splits for the oxford-iiit-pet config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "oxford-iiit-pet_splits/split_name": "train"
+        },
+        {
+          "oxford-iiit-pet_splits/split_name": "validation"
+        },
+        {
+          "oxford-iiit-pet_splits/split_name": "test"
+        },
+        {
+          "oxford-iiit-pet_splits/split_name": "common"
+        },
+        {
+          "oxford-iiit-pet_splits/split_name": "random_linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "oxford-iiit-pet",
+      "description": "legolasflagstaff/RobustGenBench - 'oxford-iiit-pet' subset\n\nAdditional information:\n- 5 splits: train, validation, test, common, random_linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "oxford\\-iiit\\-pet/(?:partial-)?(train|validation|test|common|random_linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "oxford-iiit-pet_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "oxford-iiit-pet-clip_vitb16_splits/split_name"
+      },
+      "@id": "oxford-iiit-pet-clip_vitb16_splits",
+      "name": "oxford-iiit-pet-clip_vitb16_splits",
+      "description": "Splits for the oxford-iiit-pet-clip_vitb16 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "l1_75"
+        },
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "l1_300"
+        },
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "l2_2"
+        },
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "l2_8"
+        },
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "linf_4"
+        },
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "linf_8"
+        },
+        {
+          "oxford-iiit-pet-clip_vitb16_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "oxford-iiit-pet-clip_vitb16",
+      "description": "legolasflagstaff/RobustGenBench - 'oxford-iiit-pet-clip_vitb16' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "oxford\\-iiit\\-pet\\-clip_vitb16/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "oxford-iiit-pet-clip_vitb16_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vitb16/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vitb16"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "oxford-iiit-pet-clip_vith14_splits/split_name"
+      },
+      "@id": "oxford-iiit-pet-clip_vith14_splits",
+      "name": "oxford-iiit-pet-clip_vith14_splits",
+      "description": "Splits for the oxford-iiit-pet-clip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "oxford-iiit-pet-clip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "oxford-iiit-pet-clip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'oxford-iiit-pet-clip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "oxford\\-iiit\\-pet\\-clip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "oxford-iiit-pet-clip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-clip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-clip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "oxford-iiit-pet-metaclip_vith14_splits/split_name"
+      },
+      "@id": "oxford-iiit-pet-metaclip_vith14_splits",
+      "name": "oxford-iiit-pet-metaclip_vith14_splits",
+      "description": "Splits for the oxford-iiit-pet-metaclip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "oxford-iiit-pet-metaclip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "oxford-iiit-pet-metaclip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'oxford-iiit-pet-metaclip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "oxford\\-iiit\\-pet\\-metaclip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "oxford-iiit-pet-metaclip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-metaclip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-metaclip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "oxford-iiit-pet-siglip2_base_splits/split_name"
+      },
+      "@id": "oxford-iiit-pet-siglip2_base_splits",
+      "name": "oxford-iiit-pet-siglip2_base_splits",
+      "description": "Splits for the oxford-iiit-pet-siglip2_base config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "oxford-iiit-pet-siglip2_base_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "oxford-iiit-pet-siglip2_base",
+      "description": "legolasflagstaff/RobustGenBench - 'oxford-iiit-pet-siglip2_base' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "oxford\\-iiit\\-pet\\-siglip2_base/(?:partial-)?(linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "oxford-iiit-pet-siglip2_base_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "oxford-iiit-pet-siglip2_base/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-oxford-iiit-pet-siglip2_base"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "stanford_cars_splits/split_name"
+      },
+      "@id": "stanford_cars_splits",
+      "name": "stanford_cars_splits",
+      "description": "Splits for the stanford_cars config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "stanford_cars_splits/split_name": "train"
+        },
+        {
+          "stanford_cars_splits/split_name": "validation"
+        },
+        {
+          "stanford_cars_splits/split_name": "test"
+        },
+        {
+          "stanford_cars_splits/split_name": "common"
+        },
+        {
+          "stanford_cars_splits/split_name": "random_linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "stanford_cars",
+      "description": "legolasflagstaff/RobustGenBench - 'stanford_cars' subset\n\nAdditional information:\n- 5 splits: train, validation, test, common, random_linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "stanford_cars/(?:partial-)?(train|validation|test|common|random_linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "stanford_cars_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "stanford_cars-clip_vitb16_splits/split_name"
+      },
+      "@id": "stanford_cars-clip_vitb16_splits",
+      "name": "stanford_cars-clip_vitb16_splits",
+      "description": "Splits for the stanford_cars-clip_vitb16 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "l1_75"
+        },
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "l1_300"
+        },
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "l2_2"
+        },
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "l2_8"
+        },
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "linf_4"
+        },
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "linf_8"
+        },
+        {
+          "stanford_cars-clip_vitb16_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "stanford_cars-clip_vitb16",
+      "description": "legolasflagstaff/RobustGenBench - 'stanford_cars-clip_vitb16' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "stanford_cars\\-clip_vitb16/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "stanford_cars-clip_vitb16_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vitb16/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vitb16"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "stanford_cars-clip_vith14_splits/split_name"
+      },
+      "@id": "stanford_cars-clip_vith14_splits",
+      "name": "stanford_cars-clip_vith14_splits",
+      "description": "Splits for the stanford_cars-clip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "stanford_cars-clip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "stanford_cars-clip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'stanford_cars-clip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "stanford_cars\\-clip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "stanford_cars-clip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-clip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-clip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "stanford_cars-siglip2_base_splits/split_name"
+      },
+      "@id": "stanford_cars-siglip2_base_splits",
+      "name": "stanford_cars-siglip2_base_splits",
+      "description": "Splits for the stanford_cars-siglip2_base config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "stanford_cars-siglip2_base_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "stanford_cars-siglip2_base",
+      "description": "legolasflagstaff/RobustGenBench - 'stanford_cars-siglip2_base' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "stanford_cars\\-siglip2_base/(?:partial-)?(linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "stanford_cars-siglip2_base_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stanford_cars-siglip2_base/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-stanford_cars-siglip2_base"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "uc-merced-land-use-dataset_splits/split_name"
+      },
+      "@id": "uc-merced-land-use-dataset_splits",
+      "name": "uc-merced-land-use-dataset_splits",
+      "description": "Splits for the uc-merced-land-use-dataset config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "uc-merced-land-use-dataset_splits/split_name": "train"
+        },
+        {
+          "uc-merced-land-use-dataset_splits/split_name": "validation"
+        },
+        {
+          "uc-merced-land-use-dataset_splits/split_name": "test"
+        },
+        {
+          "uc-merced-land-use-dataset_splits/split_name": "common"
+        },
+        {
+          "uc-merced-land-use-dataset_splits/split_name": "random_linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "uc-merced-land-use-dataset",
+      "description": "legolasflagstaff/RobustGenBench - 'uc-merced-land-use-dataset' subset\n\nAdditional information:\n- 5 splits: train, validation, test, common, random_linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "uc\\-merced\\-land\\-use\\-dataset/(?:partial-)?(train|validation|test|common|random_linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "uc-merced-land-use-dataset_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "uc-merced-land-use-dataset-clip_vitb16_splits/split_name"
+      },
+      "@id": "uc-merced-land-use-dataset-clip_vitb16_splits",
+      "name": "uc-merced-land-use-dataset-clip_vitb16_splits",
+      "description": "Splits for the uc-merced-land-use-dataset-clip_vitb16 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "l1_75"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "l1_300"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "l2_2"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "l2_8"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "linf_4"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "linf_8"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vitb16_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "uc-merced-land-use-dataset-clip_vitb16",
+      "description": "legolasflagstaff/RobustGenBench - 'uc-merced-land-use-dataset-clip_vitb16' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "uc\\-merced\\-land\\-use\\-dataset\\-clip_vitb16/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "uc-merced-land-use-dataset-clip_vitb16_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vitb16/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vitb16"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "uc-merced-land-use-dataset-clip_vith14_splits/split_name"
+      },
+      "@id": "uc-merced-land-use-dataset-clip_vith14_splits",
+      "name": "uc-merced-land-use-dataset-clip_vith14_splits",
+      "description": "Splits for the uc-merced-land-use-dataset-clip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "uc-merced-land-use-dataset-clip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "uc-merced-land-use-dataset-clip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'uc-merced-land-use-dataset-clip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "uc\\-merced\\-land\\-use\\-dataset\\-clip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "uc-merced-land-use-dataset-clip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-clip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-clip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name"
+      },
+      "@id": "uc-merced-land-use-dataset-metaclip_vith14_splits",
+      "name": "uc-merced-land-use-dataset-metaclip_vith14_splits",
+      "description": "Splits for the uc-merced-land-use-dataset-metaclip_vith14 config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "l1_75"
+        },
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "l1_300"
+        },
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "l2_2"
+        },
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "l2_8"
+        },
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "linf_4"
+        },
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "linf_8"
+        },
+        {
+          "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "uc-merced-land-use-dataset-metaclip_vith14",
+      "description": "legolasflagstaff/RobustGenBench - 'uc-merced-land-use-dataset-metaclip_vith14' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "uc\\-merced\\-land\\-use\\-dataset\\-metaclip_vith14/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "uc-merced-land-use-dataset-metaclip_vith14_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-metaclip_vith14/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-metaclip_vith14"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "uc-merced-land-use-dataset-siglip2_base_splits/split_name"
+      },
+      "@id": "uc-merced-land-use-dataset-siglip2_base_splits",
+      "name": "uc-merced-land-use-dataset-siglip2_base_splits",
+      "description": "Splits for the uc-merced-land-use-dataset-siglip2_base config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "uc-merced-land-use-dataset-siglip2_base_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "uc-merced-land-use-dataset-siglip2_base",
+      "description": "legolasflagstaff/RobustGenBench - 'uc-merced-land-use-dataset-siglip2_base' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "uc\\-merced\\-land\\-use\\-dataset\\-siglip2_base/(?:partial-)?(linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "uc-merced-land-use-dataset-siglip2_base_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_base/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_base"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name"
+      },
+      "@id": "uc-merced-land-use-dataset-siglip2_so400m_splits",
+      "name": "uc-merced-land-use-dataset-siglip2_so400m_splits",
+      "description": "Splits for the uc-merced-land-use-dataset-siglip2_so400m config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "l1_75"
+        },
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "l1_300"
+        },
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "l2_2"
+        },
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "l2_8"
+        },
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "linf_4"
+        },
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "linf_8"
+        },
+        {
+          "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name": "linf_30"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "uc-merced-land-use-dataset-siglip2_so400m",
+      "description": "legolasflagstaff/RobustGenBench - 'uc-merced-land-use-dataset-siglip2_so400m' subset\n\nAdditional information:\n- 7 splits: l1_75, l1_300, l2_2, l2_8, linf_4, linf_8, linf_30",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "uc\\-merced\\-land\\-use\\-dataset\\-siglip2_so400m/(?:partial-)?(l1_75|l1_300|l2_2|l2_8|linf_4|linf_8|linf_30)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "uc-merced-land-use-dataset-siglip2_so400m_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "image"
+            },
+            "transform": {
+              "jsonPath": "bytes"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/label",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/image_id",
+          "dataType": "cr:Int32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "image_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/perturbation",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "perturbation"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/surrogate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "surrogate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/norm",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "norm"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/epsilon",
+          "dataType": "cr:Float32",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "epsilon"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/corruption",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "corruption"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "uc-merced-land-use-dataset-siglip2_so400m/is_modified",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-uc-merced-land-use-dataset-siglip2_so400m"
+            },
+            "extract": {
+              "column": "is_modified"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
